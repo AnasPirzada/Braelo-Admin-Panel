@@ -1,0 +1,12 @@
+:root{
+    --btnbg: #FFCC35;
+}
+a{
+    text-decoration: none;
+    /* color: var(--btnbg); */
+}
+p{
+    margin-bottom: 0;
+}
+
+
