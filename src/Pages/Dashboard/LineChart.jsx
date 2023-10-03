@@ -1,117 +1,77 @@
-import  { Component } from 'react';
-import CanvasJSReact from '@canvasjs/react-charts';
-//var CanvasJSReact = require('@canvasjs/react-charts');
- 
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
- 
-class LineChart extends Component {	
-	constructor() {
-		super();
-		this.toggleDataSeries = this.toggleDataSeries.bind(this);
-	}
-	
-	toggleDataSeries(e){
-		if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-			e.dataSeries.visible = false;
-		}
-		else{
-			e.dataSeries.visible = true;
-		}
-		this.chart.render();
-	}
-	
-	render() {
-		const options = {
-			theme: "light2",
-			animationEnabled: true,
-			title:{
-				text: "Total Sales"
-			},
-			subtitles: [{
-				text: "Click Legend to Hide or Unhide Data Series"
-			}],
-			axisX: {
-				title: "States"
-			},
-			axisY: {
-				title: "",
-				titleFontColor: "#6D78AD",
-				lineColor: "#000",
-				labelFontColor: "#ee9e03",
-				tickColor: "#6D78AD"
-			},
-			axisY2: {
-				title: "",
-				titleFontColor: "#51CDA0",
-				lineColor: "#51CDA0",
-				labelFontColor: "#FFE7A0",
-				tickColor: "#51CDA0"
-			},
-			toolTip: {
-				shared: true
-			},
-			legend: {
-				cursor: "pointer",
-				itemclick: this.toggleDataSeries
-			},
-			data: [{
-				type: "spline",
-				name: "Units Sold",
-				showInLegend: true,
-				xValueFormatString: "MMM YYYY",
-				yValueFormatString: "#,##0 Units",
-                color:'#ee9e03',
-				dataPoints: [
-					{ x: new Date(2017, 0, 1), y: 120 },
-					{ x: new Date(2017, 1, 1), y: 135 },
-					{ x: new Date(2017, 2, 1), y: 144 },
-					{ x: new Date(2017, 3, 1), y: 103 },
-					{ x: new Date(2017, 4, 1), y: 93 },
-					{ x: new Date(2017, 5, 1), y: 129 },
-					{ x: new Date(2017, 6, 1), y: 143 },
-					{ x: new Date(2017, 7, 1), y: 156 },
-					{ x: new Date(2017, 8, 1), y: 122 },
-					{ x: new Date(2017, 9, 1), y: 106 },
-					{ x: new Date(2017, 10, 1), y: 137 },
-					{ x: new Date(2017, 11, 1), y: 142 }
-				]
-			},
-			{
-				type: "spline",
-				name: "Profit",
-				axisYType: "secondary",
-				showInLegend: true,
-				xValueFormatString: "MMM YYYY",
-				yValueFormatString: "$#,##0.#",
-                color:'#FFE7A0', 
-				dataPoints: [
-					{ x: new Date(2017, 0, 1), y: 19034.5 },
-					{ x: new Date(2017, 1, 1), y: 20015 },
-					{ x: new Date(2017, 2, 1), y: 27342 },
-					{ x: new Date(2017, 3, 1), y: 20088 },
-					{ x: new Date(2017, 4, 1), y: 20234 },
-					{ x: new Date(2017, 5, 1), y: 29034 },
-					{ x: new Date(2017, 6, 1), y: 30487 },
-					{ x: new Date(2017, 7, 1), y: 32523 },
-					{ x: new Date(2017, 8, 1), y: 20234 },
-					{ x: new Date(2017, 9, 1), y: 27234 },
-					{ x: new Date(2017, 10, 1), y: 33548 },
-					{ x: new Date(2017, 11, 1), y: 32534 }
-				]
-			}]
-		}
-		
-		
-		return (
-		<div>
-			<CanvasJSChart options = {options}  onRef={ref => this.chart = ref}
-			/>
-			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
-		</div>
-		);
-	}
-			
-}
+import { PureComponent } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-export default LineChart;
+const data = [
+  {
+   
+    Profit: 4000,
+    Sales: 2400,
+    amt: 2400,
+  },
+  {
+  
+    Profit: 3000,
+    Sales: 1398,
+    amt: 2210,
+  },
+  {
+    
+    Profit: 2000,
+    Sales: 9800,
+    amt: 2290,
+  },
+  {
+
+    Profit: 2780,
+    Sales: 3908,
+    amt: 2000,
+  },
+  {
+
+    Profit: 1890,
+    Sales: 4800,
+    amt: 2181,
+  },
+  {
+
+    Profit: 2390,
+    Sales: 3800,
+    amt: 2500,
+  },
+  {
+
+    Profit: 3490,
+    Sales: 4300,
+    amt: 2100,
+  },
+];
+
+export default class LineCharts extends PureComponent {
+  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
+
+  render() {
+    return (
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          {/* <CartesianGrid strokeDasharray="10 10" /> */}
+          <XAxis dataKey="name" style={{fontSize:'10px'}} />
+          <YAxis  style={{fontSize:'10px'}}/>
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="Sales" stroke="#F3A000" strokeWidth={3} activeDot={{ r: 8 }} style={{height:'4px'}} />
+          <Line type="monotone" dataKey="Profit" stroke="#FFE8BA" strokeWidth={3} activeDot={{ r: 8 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    );
+  }
+}

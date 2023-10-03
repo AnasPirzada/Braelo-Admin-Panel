@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import SideBar from "../../Components/SideBar";
 import NaveBar from "../../Components/NaveBar";
 import DashBroadCard from "./DashBroadCard";
-import LineChart from "./LineChart";
+import LineCharts from "./LineChart";
 import ImgCard from "./ImgCard";
 import HalfPieChart from "./HalfPieChart";
 import ListofPerson from "./ListofPerson";
@@ -51,8 +51,9 @@ const Dashboard = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col>
-                    <LineChart />
+                  <Col style={{height:'400px'}}>
+                    <LineCharts />
+                    sss
                   </Col>
                 </Row>
               </Col>
