@@ -33,7 +33,7 @@ const SideBar = (props) => {
             <p className="mb-0 ">Dashboard</p>
           </div>
         </Link>
-        <Link to="/Advertising">
+        <Link to="/AdvertisingPage">
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
               activeTab === "Advertising" ? "sidebarctivetab" : ""

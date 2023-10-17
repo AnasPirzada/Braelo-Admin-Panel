@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap"
 import SideBar from "../../Components/SideBar"
+import NaveBar from "../../Components/NaveBar";
 
 const System = () => {
   return (
@@ -12,8 +13,10 @@ const System = () => {
            activetabe="System"
           />
         </Col>
-        <Col xs={10} md={10}>
-        System
+        <Col md={10} xs={10} style={{ height: "100vh", overflowY: "auto" }}>
+        <Row>
+              <NaveBar />
+            </Row>
         </Col>
       </Row>
     </Container>

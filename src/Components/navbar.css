@@ -1,14 +1,14 @@
 .input-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align items with space in between */
+    justify-content: space-between; 
     padding: 9px;
     border: 1px solid #ccc;
     border-radius: 9px;
 }
 
 .input-container img {
-    margin-right: 8px; /* Add some right margin to separate image from input */
+    margin-right: 8px; 
 }
 
 input {

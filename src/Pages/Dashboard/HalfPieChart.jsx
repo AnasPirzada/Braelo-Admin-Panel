@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  {  useState  } from 'react';
 import './HalfPieChart.css'
 import ReactApexChart from 'react-apexcharts';
 
@@ -8,6 +8,7 @@ const HalfPieChart = () => {
         options: {
           chart: {
             type: 'donut',
+            height: '200%',
           },
           plotOptions: {
             pie: {
@@ -21,29 +22,37 @@ const HalfPieChart = () => {
               bottom: -80
             }
           },
-          responsive: [{
-            breakpoint: 900,
-            options: {
-              chart: {
-                width: 200
-              },
-              legend: {
-                position: 'bottom'
-              }
-            }
-          }],
+          // responsive: [{
+          //   breakpoint: 900,
+          //   options: {
+          //     chart: {
+          //       width: 200
+          //     },
+          //     legend: {
+          //       position: 'bottom'
+          //     }
+          //   }
+          // }],
           labels: ['Business', 'Flat', 'Yellow', 'Canceled', 'Pending'],
         }
       });
+
   return (
    <>
    
    <div id="chart">
-      <ReactApexChart  className="mobilemargin ms-2" options={chartData.options} series={chartData.series} type="donut" />
-    <p className=' text-center pt-2 pb-4 '>Total Subscription : 189</p>
+      <ReactApexChart  className="mobilemargin ms-2 "  options={chartData.options} series={chartData.series} type="donut" />
+      <p className=' text-center pt-2 pb-4 '>Total Subscription : 189</p>
     </div>
    </>
   )
 }
 
 export default HalfPieChart
+
+
+
+
+
+
+{/*  */}

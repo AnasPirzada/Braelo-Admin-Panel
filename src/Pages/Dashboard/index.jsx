@@ -51,16 +51,16 @@ const Dashboard = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col style={{height:'400px'}}>
+                  <Col style={{height:'300px'}}>
                     <LineCharts />
                     sss
                   </Col>
                 </Row>
               </Col>
-              <Col md={4} className="">
+              <Col md={4} className="mt-md-2 mt-5">
                 <Row
-                  className=" rounded-4 border ms-3 "
-                  style={{ backgroundColor: "#F8F9FA", width: "90%" }}
+                  className=" rounded-4 border  "
+                  style={{ backgroundColor: "#F8F9FA", width: "110%" , }}
                 >
                   <HalfPieChart />
                 </Row>
@@ -77,6 +77,9 @@ const Dashboard = () => {
           </Col>
         </Row>
       </Container>
+
+
+
     </>
   );
 };

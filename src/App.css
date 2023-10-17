@@ -1,12 +1,28 @@
-:root{
-    --btnbg: #FFCC35;
+:root {
+  --btnbg: #ffcc35;
 }
-a{
-    text-decoration: none;
-    /* color: var(--btnbg); */
+a {
+  text-decoration: none;
+  /* color: var(--btnbg); */
 }
-p{
-    margin-bottom: 0;
+p {
+  margin-bottom: 0;
 }
 
-
+body {
+  background-color: #fff !important;
+}
+.modal-content {
+  background-color: transparent !important;
+  border: none !important;
+}
+.borderyellow {
+  border: 1px solid transparent; 
+  border-image: linear-gradient(
+    104.58deg,
+    #ee9e03 5.92%,
+    rgba(255, 222, 123, 0.8) 86.02%
+  ) 1;
+  border-image-slice: 1;
+  border-radius: 50%;
+}

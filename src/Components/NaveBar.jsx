@@ -4,7 +4,7 @@ import "./navbar.css";
 const NaveBar = () => {
   return (
     <>
-      <Container className=" border-bottom  pb-3 ">
+      <Container className=" border-bottom pb-3 ">
         <Row className="mt-2">
           <Col xs={12} md={8}>
             <div className="input-container">
