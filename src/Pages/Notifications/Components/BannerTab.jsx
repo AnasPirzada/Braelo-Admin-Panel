@@ -17,10 +17,10 @@ const NotificationTabBar = (props) => {
           <Col md={8} sm={12}>
             <h3 className='text-muted'>Notification</h3>
           </Col>
-          <Col md={2} xs={12}>
+          <Col md={2} xs={6}>
             <Link className='text-muted' to='/CreateNewMessage'>
               <h3
-                className={`d-flex align-items-center justify-content-center fs-6 rounded-2 ${
+                className={`d-flex align-items-center mt-2 mt-md-0 justify-content-center fs-6 rounded-2 ${
                   activeTab === 'newMessage' ? 'active-tab' : ''
                 }`}
                 style={{
@@ -37,12 +37,12 @@ const NotificationTabBar = (props) => {
               </h3>
             </Link>
           </Col>
-          <Col md={2} xs={12}>
+          <Col md={2} xs={6}>
             {' '}
             <Link className='text-muted' to='/Advices'>
               {' '}
               <h3
-                className={`d-flex align-items-center justify-content-center fs-6 rounded-2 ${
+                className={`d-flex align-items-center mt-2 mt-md-0 justify-content-center fs-6 rounded-2 ${
                   activeTab === 'newAdvice' ? 'active-tab' : ''
                 }`}
                 style={{

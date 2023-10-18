@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Badge from 'react-bootstrap/Badge';
-
-const NotificationTabBar = () => {
+import DeleteCard from './DeleteItemcard.jsx';
+import Modal from 'react-bootstrap/Modal';
+const ActionButtonBannerTab = () => {
   const [activeTab, setActiveTab] = useState('newMessage'); // Default to 'newMessage' tab
 
   const handleTabClick = tabName => {
     setActiveTab(tabName);
   };
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState('');
   const [selected, setIsSelected] = useState('Massive actions');
-  const [displayData, setDisplayData] = useState('newMessage'); // Initialize with "hello" message
-  const [isActivee, setIsActivee] = useState(false);
-  const [selectedd, setIsSelectedd] = useState('Filter by time');
-  // Define a function to handle dropdown item clicks
+  const [displayData, setDisplayData] = useState('');
+
   const handleDropdownItemClick = data => {
     setIsSelected(data);
     setIsActive(false);
@@ -22,30 +20,34 @@ const NotificationTabBar = () => {
     // Update the displayed data based on the clicked item
     switch (data) {
       case 'Archive':
-        setDisplayData('newMessage');
+        setDisplayData('');
         break;
       case 'Disable':
-        setDisplayData('newMessage');
+        setDisplayData('');
         break;
       case 'Delete':
-        setDisplayData('newMessage');
+        setDisplayData(<DeleteCard />);
         break;
       default:
         setDisplayData('');
         break;
     }
   };
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Container className=''>
         <Row className='mt-4 border-bottom pb-3'>
-          <Col md={4} xs={12}>
+          <Col md={4} lg={4} xs={12}>
             {/* <Link className='text-muted' to='/Listings'> */}
             <h3 className='text-muted'>Listings</h3>
             {/* </Link> */}
           </Col>
-          <Col md={3} xs={12}>
-            <div className='dropdown'>
+          <Col md={3} lg={2} xs={12}>
+            <div className='dropdown mb-3 mb-md-0'>
               <div
                 onClick={() => {
                   setIsActive(!isActive);
@@ -62,6 +64,12 @@ const NotificationTabBar = () => {
                 style={{ display: isActive ? 'block' : 'none' }}
               >
                 <div
+                  onClick={() => handleDropdownItemClick('Publish')}
+                  className='item'
+                >
+                  Publish
+                </div>
+                <div
                   onClick={() => handleDropdownItemClick('Archive')}
                   className='item'
                 >
@@ -74,21 +82,26 @@ const NotificationTabBar = () => {
                   Disable
                 </div>
                 <div
-                  onClick={() => handleDropdownItemClick('Delete')}
+                  onClick={() => {
+                    handleDropdownItemClick('Delete');
+                    handleShow();
+                  }}
                   className='item'
+                  variant='primary'
+                  
                 >
                   Delete
                 </div>
               </div>
             </div>
           </Col>
-          <Col md={1} xs={6} className='d-flex'>
-            <Col>
+          <Col md={2} lg={3} xs={6} className='d-flex justify-content-end align-items-center '>
+            <Col  md={1} lg={2} xs={6}>
               <Link className='text-muted' to='/Actionsbutton'>
                 <img src='./listingCopy.svg' alt='copybutton' />{' '}
               </Link>
             </Col>
-            <Col>
+            <Col  md={2} lg={2} xs={6}>
               <img
                 src='./listingFilter.svg'
                 className='ms-2'
@@ -96,7 +109,7 @@ const NotificationTabBar = () => {
               />
             </Col>
           </Col>
-          <Col md={4} xs={6}>
+          <Col md={3} lg={3} xs={6}>
             {/* <Link className='text-muted' to='/CreateNewMessage'> */}
             <h3
               className={`d-flex align-items-center justify-content-center fs-6 rounded-2 ${
@@ -117,9 +130,16 @@ const NotificationTabBar = () => {
             {/* </Link> */}
           </Col>
         </Row>
+        <Row>
+          <Col md={6} xl={6} xs={12}>
+            <Modal show={show} centered onHide={handleClose}>
+              <Modal.Body>{displayData}</Modal.Body>
+            </Modal>
+          </Col>
+        </Row>
       </Container>
     </>
   );
 };
 
-export default NotificationTabBar;
+export default ActionButtonBannerTab;

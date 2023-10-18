@@ -49,7 +49,7 @@ const BannerTab = props => {
           <Col md={2} xs={6}>
             <Link className='text-muted' to='/createSpotlight'>
               <h3
-                className={`d-flex align-items-center justify-content-center fs-6 rounded-2 ${
+                className={`d-flex align-items-center mt-2 mt-md-0 justify-content-center fs-6 rounded-2 ${
                   activeTab === 'newSpotlight' ? 'active-tab' : ''
                 }`}
                 style={{
@@ -70,7 +70,7 @@ const BannerTab = props => {
           <Col md={2} xs={6}>
             <Link className='text-muted' to='/createTextAdd'>
               <h3
-                className={`d-flex align-items-center justify-content-center fs-6 rounded-2 ${
+                className={`d-flex align-items-center mt-2 mt-md-0  justify-content-center fs-6 rounded-2 ${
                   activeTab === 'newAdd' ? 'active-tab' : ''
                 }`}
                 style={{

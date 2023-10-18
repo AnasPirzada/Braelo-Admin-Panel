@@ -19,7 +19,7 @@ const activeStyle = {
 }
 
 const Tabbar = ({ children, isActive }) => (
-  <span style={isActive ? activeStyle : style}>{children}</span>
+  <span className='text-nowrap fontformedia' style={isActive ? activeStyle : style}>{children}</span>
 )
 
 export default Tabbar

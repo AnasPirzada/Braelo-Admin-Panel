@@ -22,6 +22,7 @@ import CreateTextAdd from './Pages/Advertising/CreateTextAdd.jsx';
 import CreateNewMessage from './Pages/Notifications/index.jsx';
 import Advices from './Pages/Notifications/page/CreateNewMessage.jsx';
 import Actionsbutton from './Pages/Listings/page/ActionsButton.jsx';
+import CreateListing from './Pages/Listings/page/CreateListing.jsx';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Route path='/CreateNewMessage' element={<CreateNewMessage />} />
         <Route path='/Advices' element={<Advices />} />
         <Route path='/Actionsbutton' element={<Actionsbutton />} />
+        <Route path='/CreateListing' element={<CreateListing />} />
       </Routes>
     </BrowserRouter>
   );

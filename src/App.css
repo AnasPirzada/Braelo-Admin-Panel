@@ -26,3 +26,9 @@ body {
   border-image-slice: 1;
   border-radius: 50%;
 }
+
+@media screen and (max-width: 767px) {
+  .fontformedia {
+    font-size: 12px !important;
+  }
+}
