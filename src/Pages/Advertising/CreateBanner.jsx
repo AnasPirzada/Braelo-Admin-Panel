@@ -116,7 +116,6 @@ const CreateBanner = () => {
                       (Words or categories related to this item)
                     </small>
                   </h6>
-                  {/* <Col xl={12} xs={12}> */}
                   <div className='border  border-1 w-100 h-100 p-2 rounded-3 '>
                     <div className='mt-2'>
                       <input
@@ -153,7 +152,6 @@ const CreateBanner = () => {
                       ))}
                     </div>
                   </div>
-                  {/* </Col> */}
                 </div>
               </Col>
             </Row>

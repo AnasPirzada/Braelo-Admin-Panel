@@ -41,13 +41,13 @@ const ActionButtonBannerTab = () => {
     <>
       <Container className=''>
         <Row className='mt-4 border-bottom pb-3'>
-          <Col md={4} lg={4} xs={12}>
+          <Col xl={4} lg={4} xs={12}>
             {/* <Link className='text-muted' to='/Listings'> */}
             <h3 className='text-muted'>Listings</h3>
             {/* </Link> */}
           </Col>
-          <Col md={3} lg={2} xs={12}>
-            <div className='dropdown mb-3 mb-md-0'>
+          <Col xl={2} lg={2} xs={12}>
+            <div className='dropdown mb-3 mb-md-0 ms-0'>
               <div
                 onClick={() => {
                   setIsActive(!isActive);
@@ -95,7 +95,7 @@ const ActionButtonBannerTab = () => {
               </div>
             </div>
           </Col>
-          <Col md={2} lg={3} xs={6} className='d-flex justify-content-end align-items-center '>
+          <Col xl={3} lg={3} xs={6} className='d-flex justify-content-end align-items-center '>
             <Col  md={1} lg={2} xs={6}>
               <Link className='text-muted' to='/Actionsbutton'>
                 <img src='./listingCopy.svg' alt='copybutton' />{' '}
@@ -109,7 +109,7 @@ const ActionButtonBannerTab = () => {
               />
             </Col>
           </Col>
-          <Col md={3} lg={3} xs={6}>
+          <Col xl={3} lg={3} xs={6}>
             {/* <Link className='text-muted' to='/CreateNewMessage'> */}
             <h3
               className={`d-flex align-items-center justify-content-center fs-6 rounded-2 ${
