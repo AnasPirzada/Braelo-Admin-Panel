@@ -14,20 +14,20 @@ const BannerTab = props => {
     <>
       <Container className=''>
         <Row className='mt-4 border-bottom pb-3  '>
-          <Col md={5} sm={3}>
+          <Col md={4} sm={3}>
             <h3 className='text-muted'>
               <Link className='text-muted' to='/AdvertisingPage'>
               Advertising
               </Link>
             </h3>
           </Col>
-          <Col md={1} xs={4} className='text-center'>
-            <Badge className='bg bg-secondary ' sm={3}>
+          <Col md={2} xs={4} className='text-center'>
+            <Badge className='bg bg-secondary' sm={3}>
               <img src='./fillter.svg' style={{ padding: '10px' }} />
             </Badge>
           </Col>
           <Col md={2} xs={8}>
-            <Link className='text-muted' to='/createBanner'>
+            <Link className='text-muted ' to='/createBanner'>
               <h3
                 className={`d-flex align-items-center justify-content-center fs-6 rounded-2 ${
                   activeTab === 'newBanner' ? 'active-tab' : ''
@@ -49,7 +49,7 @@ const BannerTab = props => {
           <Col md={2} xs={6}>
             <Link className='text-muted' to='/createSpotlight'>
               <h3
-                className={`d-flex align-items-center mt-2 mt-md-0 justify-content-center fs-6 rounded-2 ${
+                className={`d-flex py-2 py-md-0 align-items-center mt-2 mt-md-0 justify-content-center fs-6 rounded-2 ${
                   activeTab === 'newSpotlight' ? 'active-tab' : ''
                 }`}
                 style={{

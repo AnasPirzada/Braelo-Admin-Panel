@@ -48,6 +48,7 @@
   border-radius: 5px;
   color: #777;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 .dropdown-content {
   position: absolute;
@@ -62,7 +63,7 @@
   cursor: pointer;
 }
 .dropdown-content .item:hover {
-  background: #868E96;
+  background: #868e96;
   color: #fff;
 }
 .disabled-card {

@@ -18,7 +18,7 @@ export const ListingCard = () => {
         >
           <div className='p-2' style={{ width: '60%', height: '100%' }}>
             <img
-              src='/public/eyeiconlistingcard.svg'
+              src='./eyeiconlistingcard.svg'
               style={{
                 width: '15%',
               }}

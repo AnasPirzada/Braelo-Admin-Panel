@@ -27,7 +27,7 @@ export const inActiveCard = () => {
         >
           <div className='p-2' style={{ width: '60%', height: '100%' }}>
             <img
-              src='/public/eyeiconlistingcard.svg'
+              src='./eyeiconlistingcard.svg'
               style={{
                 width: '15%',
               }}
@@ -60,16 +60,16 @@ export const inActiveCard = () => {
       </div>
       <div className='ms-2' style={{ width: '50%', height: '100%' }}>
         <div className='text-end me-5'>
-        <label className='listing-check '>
-          <input
-            type='checkbox'
-            checked={isChecked}
-            onChange={() => setIsChecked(!isChecked)}
-          />
-          <span className='listingcustom-checkmark'></span>
-        </label>
+          <label className='listing-check '>
+            <input
+              type='checkbox'
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+            />
+            <span className='listingcustom-checkmark'></span>
+          </label>
         </div>
-        
+
         <h5 className='text-muted mt-md-4' style={{ fontSize: '18px' }}>
           Landscaping Palm Bech
         </h5>

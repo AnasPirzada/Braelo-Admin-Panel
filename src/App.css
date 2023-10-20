@@ -31,4 +31,19 @@ body {
   .fontformedia {
     font-size: 12px !important;
   }
+  .responsivedrop {
+    margin-left: 0px !important;
+  }
+}
+
+/* @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .responsivefont {
+    font-size: 1px !important;
+  }
+} */
+
+@media screen and (max-width: 1180px) {
+  .responsivedrop {
+    margin-left: 0px !important; /* Adjust margin for tablets */
+  }
 }

@@ -128,7 +128,6 @@ export const MessageSent = () => {
                 </div>
               </div>
             </Col>
-
             <Col md={4} xl={4} xs={12}>
               <InputGroup className='mb-3'>
                 <FormControl

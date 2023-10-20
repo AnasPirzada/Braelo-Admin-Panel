@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 export const CreateListingPage = () => {
   const [keywordInput, setKeywordInput] = useState('');
   const [keywords, setKeywords] = useState([
@@ -40,6 +41,8 @@ export const CreateListingPage = () => {
     const selectedFile = e.target.files[0];
     // Do something with the selected file (e.g., upload or display it)
   };
+  // Using listinginput field data to other
+
   return (
     <div>
       <Row>
@@ -135,7 +138,7 @@ export const CreateListingPage = () => {
               />
             </div>
           </Col>
-          <Col  md={3} xs={12}>
+          <Col md={3} xs={12}>
             {' '}
             <div>
               <label className='text-muted mt-3 mt-md-0'>
@@ -154,7 +157,7 @@ export const CreateListingPage = () => {
               />
             </div>
           </Col>
-          <Col  md={3} xs={12}>
+          <Col md={3} xs={12}>
             {' '}
             <div>
               <label className='text-muted mt-3 mt-md-0'>
@@ -175,7 +178,7 @@ export const CreateListingPage = () => {
           </Col>
         </Row>
         <Row className='mt-4'>
-          <Col  md={4} xs={12}>
+          <Col md={4} xs={12}>
             {' '}
             <div>
               <label className='text-muted'>Postal Code</label>
@@ -185,7 +188,7 @@ export const CreateListingPage = () => {
               />
             </div>
           </Col>
-          <Col  md={4} xs={12}>
+          <Col md={4} xs={12}>
             {' '}
             <div>
               <label className='text-muted mt-3 mt-md-0'>Address</label>
@@ -195,7 +198,7 @@ export const CreateListingPage = () => {
               />
             </div>
           </Col>
-          <Col  md={4} xs={12}>
+          <Col md={4} xs={12}>
             {' '}
             <div>
               <label className='text-muted mt-3 mt-md-0'>Phone number</label>
@@ -207,7 +210,7 @@ export const CreateListingPage = () => {
           </Col>
         </Row>
         <Row className='mt-4'>
-          <Col  md={6} xs={12}>
+          <Col md={6} xs={12}>
             <div>
               <label className='text-muted'>Website</label>
               <input
@@ -216,7 +219,7 @@ export const CreateListingPage = () => {
               />
             </div>
           </Col>
-          <Col  md={6} xs={12} >
+          <Col md={6} xs={12}>
             <div>
               <label className='text-muted mt-3 mt-md-0'>Whatsapp</label>
               <input
@@ -227,7 +230,7 @@ export const CreateListingPage = () => {
           </Col>
         </Row>
         <Row className='mt-4'>
-          <Col  md={6} xs={12}>
+          <Col md={6} xs={12}>
             <div>
               <label className='text-muted'>Facebook</label>
               <input
@@ -236,7 +239,7 @@ export const CreateListingPage = () => {
               />
             </div>
           </Col>
-          <Col  md={6} xs={12}>
+          <Col md={6} xs={12}>
             <div>
               <label className='text-muted mt-3 mt-md-0'>Instagram</label>
               <input
@@ -254,7 +257,7 @@ export const CreateListingPage = () => {
               style={{
                 border: '2px dotted rgba(205, 148, 3, 0.5)',
                 height: '300px',
-                borderRadius:'11.891px'
+                borderRadius: '11.891px',
               }}
             >
               <Col xs='auto'>
@@ -296,7 +299,7 @@ export const CreateListingPage = () => {
               className='d-flex flex-column mt-3 justify-content-center align-items-center w-100 p-4'
               style={{
                 border: '2px dotted rgba(205, 148, 3, 0.5)',
-                borderRadius:'11.891px'
+                borderRadius: '11.891px',
               }}
             >
               <Col xs='auto'>
@@ -323,7 +326,7 @@ export const CreateListingPage = () => {
               className='d-flex flex-column mt-3 justify-content-center align-items-center w-100 p-4'
               style={{
                 border: '2px dotted rgba(205, 148, 3, 0.5)',
-                borderRadius:'11.891px'
+                borderRadius: '11.891px',
               }}
             >
               <Col xs='auto'>
@@ -350,7 +353,7 @@ export const CreateListingPage = () => {
               className='d-flex flex-column mt-3 justify-content-center align-items-center w-100 p-4'
               style={{
                 border: '2px dotted rgba(205, 148, 3, 0.5)',
-                borderRadius:'11.891px'
+                borderRadius: '11.891px',
               }}
             >
               <Col xs='auto'>
@@ -377,7 +380,7 @@ export const CreateListingPage = () => {
               className='d-flex flex-column mt-3 justify-content-center align-items-center w-100 p-4'
               style={{
                 border: '2px dotted rgba(205, 148, 3, 0.5)',
-                borderRadius:'11.891px'
+                borderRadius: '11.891px',
               }}
             >
               <Col xs='auto'>
@@ -404,7 +407,7 @@ export const CreateListingPage = () => {
               className='d-flex flex-column mt-3 justify-content-center align-items-center w-100 p-4'
               style={{
                 border: '2px dotted rgba(205, 148, 3, 0.5)',
-                borderRadius:'11.891px'
+                borderRadius: '11.891px',
               }}
             >
               <Col xs='auto'>
@@ -431,7 +434,7 @@ export const CreateListingPage = () => {
               className='d-flex flex-column mt-3 justify-content-center align-items-center w-100 p-4'
               style={{
                 border: '2px dotted rgba(205, 148, 3, 0.5)',
-                borderRadius:'11.891px'
+                borderRadius: '11.891px',
               }}
             >
               <Col xs='auto'>
@@ -456,7 +459,10 @@ export const CreateListingPage = () => {
         </Row>
         <Row className='mt-4 mb-4'>
           <Col lg={8}></Col>
-          <Col lg={4}className='d-flex justify-content-center align-items-center'>
+          <Col
+            lg={4}
+            className='d-flex justify-content-center align-items-center'
+          >
             <Col>
               <button
                 type='button'
@@ -470,13 +476,15 @@ export const CreateListingPage = () => {
               </button>
             </Col>
             <Col>
-              <button
-                type='button'
-                className='ms-2 w-100 rounded-3 p-2 border-0 text-white '
-                style={{ backgroundColor: '#596068' }}
-              >
-                Next
-              </button>
+              <Link className='text-muted' to='/CreateListingPreview'>
+                <button
+                  type='button'
+                  className='ms-2 w-100 rounded-3 p-2 border-0 text-white '
+                  style={{ backgroundColor: '#596068' }}
+                >
+                  Next
+                </button>
+              </Link>
             </Col>
           </Col>
         </Row>

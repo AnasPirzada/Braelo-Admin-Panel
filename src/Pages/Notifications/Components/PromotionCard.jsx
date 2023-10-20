@@ -14,7 +14,7 @@ export const PromotionCard = () => {
         </Col>
         <Col md={10}>
           <div className='border-bottom d-flex pb-3'>
-            <img src='/public/braeloicon.svg' alt='braelo icon' />
+            <img src='./braeloicon.svg' alt='braelo icon' />
             <p className='text-muted ms-2 '>Braelo promotions</p>
           </div>
           <p className='text-muted '>

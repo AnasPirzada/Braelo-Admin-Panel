@@ -1,11 +1,12 @@
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import SideBar from '../../Components/SideBar';
-import NaveBar from '../../Components/NaveBar.jsx';
-import BannerTab from './Components/NewsBannerTab.jsx';
-import NewsTabBar from './Components/Tabbar.jsx';
-const News = () => {
+import SideBar from '../../../Components/SideBar.jsx';
+import NaveBar from '../../../Components/NaveBar.jsx';
+import AddNewPostBannerTab from '../Components/AddNewPostBannerTab.jsx';
+import AddNewPage from '../Components/AddNewPostPage.jsx';
+export const AddNewPost = () => {
   return (
-    <>
+    <div>
       <Container fluid className='  h-100'>
         <Row>
           <Col
@@ -21,16 +22,15 @@ const News = () => {
               <NaveBar />
             </Row>
             <Row>
-              <BannerTab />
+              <AddNewPostBannerTab />
             </Row>
             <Row>
-              <NewsTabBar />
+              <AddNewPage />
             </Row>
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
-
-export default News;
+export default AddNewPost;
