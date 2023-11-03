@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-const ConfirmCard = () => {
+export const ScheduleConfirmCard = () => {
   const [isSectionOpen, setSectionOpen] = useState(true);
 
   const handleCloseSection = () => {
@@ -30,11 +30,7 @@ const ConfirmCard = () => {
           </Row>
           <Row className='justify-content-center mt-5'>
             <Col className='mt-4'>
-              <img
-                className='mt-5'
-                src='./checkicon.svg'
-                alt='checkIcon'
-              />
+              <img className='mt-5' src='./checkicon.svg' alt='checkIcon' />
             </Col>
           </Row>
           <Row>
@@ -45,7 +41,7 @@ const ConfirmCard = () => {
           <Row>
             <Col xl={2}></Col>
             <Col xl={8} className='mt-3'>
-              <p>Your highlight has been published successfully!</p>
+              <p>The publication has been successfully scheduled!</p>
             </Col>
             <Col xl={2}></Col>
           </Row>
@@ -54,5 +50,4 @@ const ConfirmCard = () => {
     </>
   );
 };
-
-export default ConfirmCard;
+export default ScheduleConfirmCard;

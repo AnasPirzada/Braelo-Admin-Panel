@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
 
 export const NewsBannerTab = () => {
-  const [activeTab, setActiveTab] = useState('newMessage'); // Default to 'newMessage' tab
+  const [activeTab, setActiveTab] = useState('newMessage'); 
 
   const handleTabClick = tabName => {
     setActiveTab(tabName);

@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import TextEditor from './TextEditor.jsx';
+import ScheduleCard from './ScheduleCard.jsx';
+import Modal from 'react-bootstrap/Modal';
 export const AddNewPostPage = () => {
   const [isActive, setIsActive] = useState(false);
   const [selected, setIsSelected] = useState('Massive actions');
@@ -71,6 +73,15 @@ export const AddNewPostPage = () => {
     const updatedKeywords = [...keywords];
     updatedKeywords.splice(index, 1);
     setKeywords(updatedKeywords);
+  };
+  //------------------------- Modal---------------------------------------
+  const [modalShow, setModalShow] = useState(false);
+  const [nextModalShow, setNextModalShow] = useState(false);
+
+  // Function to handle opening the "Next" modal
+  const handleNextModalShow = () => {
+    setModalShow(false); // Close the current modal
+    setNextModalShow(true); // Open the "Next" modal
   };
   return (
     <>
@@ -354,7 +365,7 @@ export const AddNewPostPage = () => {
             </Col>
             <Col xl={6} xs={12}>
               <div className='w-100' style={{ height: '300px' }}>
-                <h6 className='text-muted '>
+                <h6 className='text-muted my-3'>
                   Keywords{' '}
                   <small className='ms-3 ' style={{ fontSize: '10px' }}>
                     {' '}
@@ -404,17 +415,35 @@ export const AddNewPostPage = () => {
       </Row>
       <Row className='m-4'>
         <Col md={5}></Col>
-        <Col md={7} className='mt-auto h-100 d-flex'>
+        <Col md={7} className=' h-100 d-flex mt-5 mt-md-0'>
           <Col md={2}>
             <button
+              variant='secondary'
+              onClick={handleNextModalShow}
               className='py-2 px-4 border-0 rounded-3 text-white w-100'
               style={{ backgroundColor: '#868E96' }}
             >
               Schedule
             </button>
           </Col>
+          <div>
+            <Modal
+              style={{
+                backgroundColor: 'rgba(233, 236, 239, 0.19)',
+                backdropFilter: 'blur(14.5px)',
+              }}
+              show={nextModalShow}
+              onHide={() => setNextModalShow(false)}
+              centered
+            >
+              <ScheduleCard onHide={() => setNextModalShow(false)} />
+            </Modal>
+          </div>
           <Col md={2}>
-            <button className='ms-2 py-2 w-100 px-4  bg-dark text-white border-0 rounded-3 '   style={{ backgroundColor: '#596068' }}>
+            <button
+              className='ms-2 py-2 w-100 px-4  bg-dark text-white border-0 rounded-3 '
+              style={{ backgroundColor: '#596068' }}
+            >
               Publish
             </button>
           </Col>

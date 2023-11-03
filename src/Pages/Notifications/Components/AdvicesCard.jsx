@@ -9,12 +9,12 @@ export const AdvicesCard = () => {
       <Row>
         <div className='text-end my-2'> 
           <img
-            src='/public/editadvice.svg'
+            src='./editadvice.svg'
             alt='edit Icon'
             style={{ width: '30px' }}
           />
           <img
-            src='/public/deladvice.svg'
+            src='./deladvice.svg'
             alt='del Icon'
             style={{ width: '30px' }}
             className='me-2 ms-2'

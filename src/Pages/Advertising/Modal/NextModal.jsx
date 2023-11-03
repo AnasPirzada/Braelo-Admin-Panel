@@ -43,7 +43,7 @@ const NextModal = ({ onHide }) => {
             </button>
           </Col>
           <Col lg={4}>
-            <img src='/public/ModalCardicon.svg' style={{ width: '100%' }} />
+            <img src='./ModalCardicon.svg' style={{ width: '100%' }} />
           </Col>
         </div>
         <Row className='mt-4'>
@@ -56,7 +56,7 @@ const NextModal = ({ onHide }) => {
               className='ms-2 w-100 rounded-3 p-2 border-0 text-white '
               style={{ backgroundColor: '#596068' }}
             >
-              Publish
+              Publish 
             </button>
           </Col>
           <div>

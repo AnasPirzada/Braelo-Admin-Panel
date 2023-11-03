@@ -27,7 +27,7 @@ const Dashboard = () => {
 
             <Row>
               <Col md={8}>
-                <Row>
+                <Row className='mt-2'>
                   <DashBroadCard />
                 </Row>
                 <Row>
@@ -53,7 +53,7 @@ const Dashboard = () => {
                 <Row>
                   <Col style={{height:'300px'}}>
                     <LineCharts />
-                    sss
+                    
                   </Col>
                 </Row>
               </Col>

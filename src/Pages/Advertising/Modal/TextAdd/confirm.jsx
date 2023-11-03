@@ -21,7 +21,7 @@ const ConfirmCard = () => {
               onClick={handleCloseSection}
             >
               <img
-                src='/public/X sign.svg'
+                src='./X sign.svg'
                 alt='exit'
                 style={{ width: '10%', cursor: 'pointer' }}
                 className=''
@@ -32,7 +32,7 @@ const ConfirmCard = () => {
             <Col className='mt-4'>
               <img
                 className='mt-5'
-                src='/public/checkicon.svg'
+                src='./checkicon.svg'
                 alt='checkIcon'
               />
             </Col>
