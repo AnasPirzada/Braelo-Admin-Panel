@@ -26,7 +26,7 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-const lineCharts = () => {
+const LineCharts = () => {
   const [selectedYear, setSelectedYear] = useState('2023');
 
   const handleYearChange = e => {
@@ -72,8 +72,8 @@ const lineCharts = () => {
 
   return (
     <>
-      <Row className='my-1 my-md-3 d-flex flex-column w-100'>
-        <Col className='d-flex align-items-center justify-content-between'>
+      <Row className='my-1 my-md-3'>
+        <Col className='d-flex align-items-center justify-content-between m-2'>
           <h4>Total acquisitions</h4>
           <select
             value={selectedYear}
@@ -85,43 +85,42 @@ const lineCharts = () => {
             <option value='2020'>2020</option>
           </select>
         </Col>
-        <Col>
-          <ResponsiveContainer width='100%' height='100%'>
-            <LineChart
-              width={500}
-              height={300}
-              data={getDataForYear()}
-              margin={{
-                top: 5,
-                right: 30,
-                left: 20,
-                bottom: 5,
-              }}
-            >
-              <XAxis dataKey='name' style={{ fontSize: '10px' }} />
-              <YAxis style={{ fontSize: '10px' }} />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
-              <Line
-                type='monotone'
-                dataKey='Sales'
-                stroke='#F3A000'
-                strokeWidth={3}
-                activeDot={{ r: 8 }}
-              />
-              <Line
-                type='monotone'
-                dataKey='Profit'
-                stroke='#FFE8BA'
-                strokeWidth={3}
-                activeDot={{ r: 8 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </Col>
       </Row>
+
+      <ResponsiveContainer width='100%' height='100%'>
+        <LineChart
+          width={500}
+          height={300}
+          data={getDataForYear()}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <XAxis dataKey='name' style={{ fontSize: '10px' }} />
+          <YAxis style={{ fontSize: '10px' }} />
+          <Tooltip content={<CustomTooltip />} />
+          <Legend />
+          <Line
+            type='monotone'
+            dataKey='Sales'
+            stroke='#F3A000'
+            strokeWidth={3}
+            activeDot={{ r: 8 }}
+          />
+          <Line
+            type='monotone'
+            dataKey='Profit'
+            stroke='#FFE8BA'
+            strokeWidth={3}
+            activeDot={{ r: 8 }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </>
   );
 };
 
-export default lineCharts;
+export default LineCharts;

@@ -34,20 +34,15 @@ export const SubscriptionState = () => {
 
   return (
     <div className='d-flex flex-column justify-content-start align-items-start'>
-      <div>
+      <div className='chart-container'>
         <ReactApexChart
           options={chartOptions}
           series={chartData}
           type='donut'
-          width='380'
-          
         />
-        {totalSubscriptions}
-      </div>
-      <div className='d-flex flex-column align-items-start'>
-        <div className='d-flex'>
-          <p>Total Subscriptions</p>
-          <p className='ms-5'>{totalSubscriptions}</p>
+        <div className='chart-text'>
+          <p className='total-subscriptions-text'>Total Subscriptions</p>
+          <p className='total-subscriptions-value'>{totalSubscriptions}</p>
         </div>
       </div>
       <div className='d-flex flex-column align-items-start'>
