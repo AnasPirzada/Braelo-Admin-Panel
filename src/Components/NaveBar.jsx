@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./navbar.css";
 
-const NaveBar = () => {
+const   NaveBar = () => {
   return (
     <>
       <Container className=" border-bottom pb-3 ">

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
-export const userdataOptions = () => {
+export const userdataOptions = (props) => {
   return (
     <div>
       <Row>
@@ -75,9 +75,11 @@ export const userdataOptions = () => {
         <Col xl={3}>
           <div>
             <select
-              name='cars'
-              id='cars'
+             name='subscription'
+             id='subscription'
               className='text-muted border border-1 rounded-3 p-2 w-100 '
+              value={props.selectedOption}
+              onChange={(e) => props.onOptionChange(e.target.value)}
             >
               <option value='Filter by subscription'>
                 Filter by subscription
