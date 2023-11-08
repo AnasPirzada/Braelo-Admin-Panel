@@ -52,6 +52,12 @@ body {
   font-weight: 700;
 }
 
+.thead {
+  background-color: #F5F7F9 !important;
+  color: #757575 !important;
+  border: none !important;
+}
+
 
 @media (max-width: 768px) {
 

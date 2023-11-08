@@ -116,8 +116,12 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
           </div>
         </Row>
       </div>
-      <Modal show={show} onHide={handleClose}>
-        <RRCombinedCard />
+      <Modal show={show}>
+        <RRCombinedCard
+          headtitle={headtitle}
+          pmodal={handleClose}
+          backgroundColor={backgroundColor}
+        />
       </Modal>
     </>
   );
