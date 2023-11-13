@@ -3,14 +3,14 @@ import { Row, Col } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import ConfrimCard from './confirmDeleteCard.jsx';
 
-export const DeleteItem = () => {
+export const DeleteItem = ({onHide}) => {
   const [isSectionOpen, setSectionOpen] = useState(true);
   const [modalShow, setModalShow] = useState(false);
   const [nextModalShow, setNextModalShow] = useState(false);
 
-  const handleCloseSection = () => {
-    setSectionOpen(false);
-  };
+  // const handleCloseSection = () => {
+  //   setSectionOpen(false);
+  // };
 
   const handleNextModalShow = () => {
     setModalShow(false);
@@ -28,7 +28,7 @@ export const DeleteItem = () => {
             <img
               src='/public/X sign.svg'
               style={{ cursor: 'pointer' }}
-              onClick={handleCloseSection}
+              onClick={onHide}
               alt='exit'
             />
           </div>
@@ -55,9 +55,9 @@ export const DeleteItem = () => {
 
       <Row>
         <Col md={6} xl={6} xs={12}>
-          <Modal show={nextModalShow} centered onHide={handleNextModalClose}>
+          <Modal show={nextModalShow} centered >
             <Modal.Body>
-              <ConfrimCard />
+              <ConfrimCard onHide={handleNextModalClose}/>
             </Modal.Body>
           </Modal>
         </Col>

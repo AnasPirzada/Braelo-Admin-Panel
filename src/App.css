@@ -58,6 +58,10 @@ body {
   border: none !important;
 }
 
+.selected-row {
+  opacity: 0.7;
+  /* Adjust the opacity as needed */
+}
 
 @media (max-width: 768px) {
 
@@ -76,7 +80,13 @@ body {
     font-size: 18px;
   }
 
+  .mobilewidth {
+    width: 100% !important;
+  }
 
+  .fontres {
+    font-size: 10px !important;
+  }
 
 }
 

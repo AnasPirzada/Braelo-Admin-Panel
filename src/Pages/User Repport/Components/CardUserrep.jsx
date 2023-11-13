@@ -17,12 +17,7 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
     backgroundColor = '#5D86C2';
     rateIcon = (
       <>
-        <img
-          src='./image/rateselectionicon.svg'
-          variant='primary'
-          onClick={handleShow}
-          role='button'
-        />
+        <img src='./image/rateselectionicon.svg' />
         <img src='./image/rateimageicon.svg' className='ms-3' />
         <img src='./userdeleticon.svg' className='ms-3' />
       </>
@@ -31,12 +26,7 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
     backgroundColor = '#CE605A';
     reclainIcon = (
       <>
-        <img
-          src='./Userselecticon.svg'
-          variant='primary'
-          onClick={handleShow}
-          role='button'
-        />
+        <img src='./Userselecticon.svg' />
         <img src='./userImageicon.svg' className='ms-3' />
         <img src='./userdeleticon.svg' className='ms-3' />
       </>
@@ -46,6 +36,11 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
   return (
     <>
       <div
+        variant='primary'
+        onClick={() => {
+          handleShow();
+        }}
+        role='button'
         className='ms-4 rounded-4 p-2 mt-4'
         style={{ backgroundColor: '#F7F8F9' }}
       >
@@ -55,7 +50,7 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
             xl={2}
             style={{ backgroundColor: backgroundColor || '#F7F8F9' }}
           >
-            <p>{headtitle}</p>
+            <p >{headtitle}</p>
           </Col>
         </Row>
         <Row>
@@ -116,7 +111,7 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
           </div>
         </Row>
       </div>
-      <Modal show={show}>
+      <Modal show={show} onHide={handleClose}>
         <RRCombinedCard
           headtitle={headtitle}
           pmodal={handleClose}

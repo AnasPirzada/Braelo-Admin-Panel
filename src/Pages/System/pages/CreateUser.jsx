@@ -1,11 +1,12 @@
-import { Col, Container, Row } from 'react-bootstrap';
-import SideBar from '../../Components/SideBar';
-import NaveBar from '../../Components/NaveBar';
-import TabBar from './Components/tabbar.jsx';
-import BannerTab from './Components/BannerTab.jsx';
-const System = () => {
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import NaveBar from '../../../Components/NaveBar.jsx';
+import SideBar from '../../../Components/SideBar';
+import BannerTab from '../Components/BannerTab.jsx';
+import TabBar from '../Components/NewUserTabBar.jsx';
+export const CreateUser = () => {
   return (
-    <>
+    <div>
       <Container fluid className='  h-100'>
         <Row>
           <Col
@@ -29,8 +30,7 @@ const System = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
-
-export default System;
+export default CreateUser;

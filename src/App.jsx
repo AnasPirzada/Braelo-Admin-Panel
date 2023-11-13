@@ -25,6 +25,7 @@ import Actionsbutton from './Pages/Listings/page/ActionsButton.jsx';
 import CreateListing from './Pages/Listings/page/CreateListing.jsx';
 import CreateListingPreview from './Pages/Listings/page/CreateListingPreview.jsx';
 import AddNewPost from './Pages/News/page/AddNewPost.jsx';
+import CreateNewUser from './Pages/System/pages/CreateUser.jsx';
 
 function App() {
   return (
@@ -53,8 +54,12 @@ function App() {
         <Route path='/Advices' element={<Advices />} />
         <Route path='/Actionsbutton' element={<Actionsbutton />} />
         <Route path='/CreateListing' element={<CreateListing />} />
-        <Route path='/CreateListingPreview' element={<CreateListingPreview />} />
+        <Route
+          path='/CreateListingPreview'
+          element={<CreateListingPreview />}
+        />
         <Route path='/AddNewPost' element={<AddNewPost />} />
+        <Route path='/CreateNewUser' element={<CreateNewUser />} />
       </Routes>
     </BrowserRouter>
   );

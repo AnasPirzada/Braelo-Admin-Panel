@@ -2,123 +2,135 @@ import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Rating from 'react-rating-stars-component';
 import Modal from 'react-bootstrap/Modal';
+import Confirm from './ConfirmMessage.jsx';
+import DeletedSelection from '../../Listings/components/DeleteItemcard.jsx';
 export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
+  const [showFirstModal, setShowFirstModal] = useState(true);
   const [showSecondModal, setShowSecondModal] = useState(false);
-  const [responseText, setResponseText] = useState('');
-  const [text, setText] = useState('');
-  const [showSendResponseModal, setShowSendResponseModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false); // New modal state
 
-  const openSecondModal = () => {
+  const [text, setText] = useState('');
+
+  const handleShowFirstModal = () => {
+    setShowFirstModal(true);
+  };
+
+  const handleCloseFirstModal = () => {
+    setShowFirstModal(false);
+  };
+
+  const handleShowSecondModal = () => {
     setShowSecondModal(true);
   };
 
-  const closeSecondModal = () => {
+  const handleCloseSecondModal = () => {
     setShowSecondModal(false);
   };
 
-  const handleSendResponse = () => {
-    setResponseText(text);
-    closeSecondModal();
-    // Close the parent modal
-    // pmodal();
-    setText('');
-    // Show the "Send Response" modal
-    setShowSendResponseModal(true);
+  const handleShowModal = () => {
+    setShowModal(true);
   };
 
-  const closeSendResponseModal = () => {
-    // Close the "Send Response" modal
-    setShowSendResponseModal(false);
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
+
+  const handleEditButtonClick = () => {
+    handleShowSecondModal();
+    handleShowFirstModal();
+  };
+  const handleShowDeleteModal = () => {
+    setShowDeleteModal(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setShowDeleteModal(false);
+  };
+
+  const handleDeleteButtonClick = () => {
+    handleShowDeleteModal(); // Open the new delete modal
+    handleCloseFirstModal(); // Close the current modal
+  };
+  const handleClose = () => setShow(false);
+
   return (
     <>
-      <div
-        className='p-5'
-        style={{
-          width: '50rem',
-          borderRadius: '18.477px',
-          border: '1.848px solid rgba(134, 142, 150, 0.16)',
-          backgroundColor: ' #F7F8F9',
-        }}
-      >
-        <Row className='m-2'>
-          <div className='d-flex justify-content-between align-items-center p-2'>
-            <div
-              className='py-2 text-white rounded-5 w-25 text-center my-2'
-              style={{ backgroundColor: backgroundColor || '#F7F8F9' }}
-            >
-              <p>{headtitle}</p>
+      {showFirstModal && (
+        <div
+          className='p-5 mobilewidth'
+          style={{
+            width: '150%',
+            borderRadius: '18.477px',
+            border: '1.848px solid rgba(134, 142, 150, 0.16)',
+            backgroundColor: ' #F7F8F9',
+          }}
+        >
+          <Row className='m-2'>
+            <div className='d-flex justify-content-between align-items-center p-2'>
+              <div
+                className='py-2 text-white rounded-5 w-25 text-center my-2'
+                style={{ backgroundColor: backgroundColor || '#F7F8F9' }}
+              >
+                <p className='fontres'>{headtitle}</p>
+              </div>
+              <div>
+                <p className='fontres'>
+                  September 15, 2023 at 6pm | iOs | Florida
+                </p>
+              </div>
             </div>
-            <div>
-              <p>September 15, 2023 at 6pm | iOs | Florida</p>
-            </div>
-          </div>
-        </Row>
-        <Row>
-          <div className='d-flex justify-content-between align-items-center'>
-            <Col xl={8}>
-              <div className='d-flex align-items-center '>
-                <div
-                  style={{
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    overflow: 'hidden',
-                    display: 'inline-block',
-                  }}
-                >
-                  <img
-                    src='./image/userKellyimage.png'
-                    alt='User'
+          </Row>
+          <Row>
+            <div className='d-flex justify-content-between align-items-center'>
+              <Col xl={8}>
+                <div className='d-flex align-items-center '>
+                  <div
                     style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                    }}
-                  />
-                </div>
-                <div className='ms-3'>
-                  <p
-                    style={{
-                      color: '#75818D',
-                      fontSize: '27.459px',
-                      fontWeight: '600',
+                      width: '80px',
+                      height: '80px',
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      display: 'inline-block',
                     }}
                   >
-                    Jeferson Silva
-                  </p>
+                    <img
+                      src='./image/userKellyimage.png'
+                      alt='User'
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                      }}
+                    />
+                  </div>
+                  <div className='ms-3'>
+                    <p
+                      style={{
+                        color: '#75818D',
+                        fontSize: '27.459px',
+                        fontWeight: '600',
+                      }}
+                    >
+                      Jeferson Silva
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Col>
-            <Col xl={2}>
-              <Rating
-                count={5}
-                size={24}
-                value={3.2}
-                edit={false}
-                isHalf={true}
-                activeColor='#FFD700'
-              />
-            </Col>
-          </div>
-        </Row>
-        <Row className='mt-4'>
-          {responseText ? (
-            <div className='mt-3 text-end ' style={{ width: '50rem' }}>
-              <p
-                style={{
-                  color: '#75818D',
-                  fontSize: '16.475px',
-                  fontStyle: 'normal',
-                  fontWeight: '500',
-                  textAlign: 'left',
-                }}
-              >
-                {responseText}
-              </p>
+              </Col>
+              <Col xl={2} xs={12}>
+                <Rating
+                  count={5}
+                  size={24}
+                  value={3.2}
+                  edit={false}
+                  isHalf={true}
+                  activeColor='#FFD700'
+                />
+              </Col>
             </div>
-          ) : (
+          </Row>
+          <Row className='mt-4'>
             <p>
               Hello, how are you? I'd like to report a problem that happened to
               me when I registered my product on the platform. Lorem Ipsum is
@@ -133,43 +145,44 @@ export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
               unknown printer took a galley of type and scrambled it to make a
               type specimen book.
             </p>
-          )}
-        </Row>
+          </Row>
 
-        <Row className='mt-4'>
-          <Col className='text-end m-2'>
-            <img
-              src='./image/card/editCard.svg'
-              alt='Edit'
-              onClick={openSecondModal}
-              role='button'
-            />
-            <img
-              src='./image/card/selectCard.svg'
-              alt='Select'
-              className='ms-3'
-              role='button'
-              onClick={() => {
-                handleSendResponse();
-                openSecondModal();
-              }}
-            />
+          <Row className='mt-4'>
+            <Col className='text-end m-2'>
+              <img
+                src='./image/card/editCard.svg'
+                alt='Edit'
+                onClick={handleEditButtonClick}
+                role='button'
+              />
+              <img
+                src='./image/card/selectCard.svg'
+                alt='Select'
+                className='ms-3'
+              />
 
-            <img
-              src='./image/card/imageCard.svg'
-              alt='Image'
-              className='ms-3'
-            />
-            <img src='./image/card/delCard.svg' alt='Delete' className='ms-3' />
-          </Col>
-        </Row>
-      </div>
+              <img
+                src='./image/card/imageCard.svg'
+                alt='Image'
+                className='ms-3'
+              />
+              <img
+                src='./image/card/delCard.svg'
+                alt='Delete'
+                onClick={handleDeleteButtonClick}
+                role='button'
+                className='ms-3'
+              />
+            </Col>
+          </Row>
+        </div>
+      )}
       {showSecondModal && (
-        <div className='second-modal-container'>
+        <div className='second-modal-container ms-3'>
           <div
-            className='mt-5'
+            className='mt-5 mobilewidth'
             style={{
-              width: '50rem',
+              width: '150%',
             }}
           >
             <Row
@@ -183,29 +196,44 @@ export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
                 onChange={e => setText(e.target.value)}
               />
             </Row>
-
-            <div
-              className='mt-2 text-end'
-              style={{
-                width: '50rem',
-              }}
-            >
-              <button
-                onClick={handleSendResponse}
-                className='border-0 p-2 w-25 rounded-3 text-white'
-                style={{ backgroundColor: '#868E96' }}
-              >
-                Send Response
-              </button>
-            </div>
+            <Row>
+              <Col xl={8}></Col>
+              <Col xs={12} xl={4} className='mt-4 '>
+                {/* <div
+                className='mt-2 text-end'
+                style={{
+                  width: '100%',
+                }}
+              > */}
+                <button
+                  onClick={() => {
+                    handleCloseSecondModal();
+                    handleCloseFirstModal();
+                    handleShowModal();
+                    // pmodal();
+                  }}
+                  className='border-0 p-2 w-100 rounded-3 text-white'
+                  style={{ backgroundColor: '#868E96' }}
+                >
+                  Send Response
+                </button>
+                {/* </div> */}
+              </Col>
+            </Row>
           </div>
         </div>
       )}
 
-      <Modal show={showSendResponseModal} size='sm' centered>
-        just close this prop pmodal(); on handleSendResponse dnt close the
-        existing modal
-      </Modal>
+      {showModal && (
+        <Modal show={showModal} centered>
+          <Confirm onHide={handleCloseModal} />
+        </Modal>
+      )}
+      {showDeleteModal && (
+        <Modal show={showDeleteModal} centered >
+          <DeletedSelection onHide={handleClose}/>
+        </Modal>
+      )}
     </>
   );
 };

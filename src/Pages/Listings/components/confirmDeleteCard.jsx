@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-export const confirmDeleteCard = () => {
+export const confirmDeleteCard = ({ onHide }) => {
   const [isSectionOpen, setSectionOpen] = useState(true);
-
-  const handleCloseSection = () => {
-    setSectionOpen(false);
-  };
   return (
     <>
       {isSectionOpen && (
@@ -14,7 +10,7 @@ export const confirmDeleteCard = () => {
               src='/public/X sign.svg'
               alt='exit'
               style={{ cursor: 'pointer' }}
-              onClick={handleCloseSection}
+              onClick={onHide}
             />
           </div>
           <div className='text-center'>
