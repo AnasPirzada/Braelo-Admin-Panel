@@ -21,9 +21,7 @@ export const CreateNewUser = () => {
                 }}
               >
                 <img
-                  src='
-                  https://img.freepik.com/free-photo/portrait-playful-young-brunette-woman-with-wavy-hair-looking-camera-isolated-dark-background_639032-153.jpg?w=740&t=st=1699881914~exp=1699882514~hmac=bac798b14ee5487cde13b7c2e7e3e2758c8ec6f1745603781760aa6ca431f09d
-                  '
+                  src='/public/image/Criss Germano.png'
                   style={{
                     width: '100%',
                     height: '100%',
@@ -75,27 +73,27 @@ export const CreateNewUser = () => {
               className='p-3 border rounded-4 w-100'
               placeholder='+1 (339) 215-9749'
             />
-            <div className='d-flex justify-content-between align-items-center'>
-              <div className=' w-100'>
+            <Row>
+              <Col xl={6}>
                 <label className='text-muted mt-4 mb-2'>Password</label>
                 <input
                   type='text'
                   className='p-3 border rounded-4 w-100'
                   placeholder='**********'
                 />
-              </div>
-              <div className=' w-100'>
-                <label className='text-muted mt-4 mb-2'>Function</label>
-                <select className='p-3 border rounded-4 w-100'>
-                  <option value=''></option>
-                  <option>gitHub</option>
-                  <option>LinkedIn</option>
-                  <option>Grepper</option>
-                  <option>i don't want to do that </option>
+              </Col>
+              <Col xl={6}>
+                <label className='text-muted mt-4 mb-2'>Password</label>
+                <select className='p-3 border rounded-4 w-100 text-muted'>
+                  <option value='Administrator'>Administrator</option>
+                  <option value='Comercial'>Comercial</option>
+                  <option value='Web developer'>Web developer</option>
+                  <option value='Copywriter'>Copywriter</option>
+                  <option value='Visual Designer'>Visual Designer</option>
                     
                 </select>
-              </div>
-            </div>
+              </Col>
+            </Row>
           </div>
           <div className='mb-5 mt-3'>
             <button
