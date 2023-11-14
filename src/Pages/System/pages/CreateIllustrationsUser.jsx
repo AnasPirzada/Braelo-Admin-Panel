@@ -1,8 +1,16 @@
+import { Looks } from '@mui/icons-material';
 import React, { useState, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
 export const CreateIllustrationsUser = () => {
-  const [sessionTitle, setSessionTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const [sessionTitle, setSessionTitle] = useState('Session Preview');
+  const [description, setDescription] =
+    useState(`Your ad was successfully registered!
+To see how it looks, simply go to the item 
+in your menu called "My Items" 
+and it will be there.`);
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const fileInputRef = useRef(null);
 
   const handleImageChange = e => {
@@ -36,7 +44,7 @@ export const CreateIllustrationsUser = () => {
             <label className='text-muted mb-2'>Session Title</label>
             <input
               type='text'
-              className='p-3 border rounded-4 w-100'
+              className='p-3 border rounded-4 w-100 text-muted'
               placeholder='Yeah!! Good job!'
               value={sessionTitle}
               onChange={e => setSessionTitle(e.target.value)}
@@ -45,7 +53,7 @@ export const CreateIllustrationsUser = () => {
             <label className='text-muted mt-5 mb-2'>Description</label>
             <textarea
               type='text'
-              className='p-3 border rounded-4 w-100 text-start'
+              className='p-3 border rounded-4 w-100 text-start text-muted'
               style={{ height: '20vh' }}
               placeholder={`Your ad was successfully registered!
 To see how it looks, simply go to the item 
@@ -120,9 +128,9 @@ and it will be there.`}
               }
               alt=''
               onClick={handleImageClick}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: 'pointer', width: '350px', height: '350px' }}
             />
-            <h5 className='text-black mt-4'>Good Job!</h5>
+            <h5 className='text-black mt-2'>Good Job!</h5>
             <p className='pb-5 text-muted text-center w-50 m-auto'>
               {description}
             </p>

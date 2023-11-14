@@ -97,7 +97,7 @@ function ResponsiveExample() {
 
   const handleDropdownChange = (e, index) => {
     const value = e.target.value;
-    setSelectedValues((prevValues) => ({
+    setSelectedValues(prevValues => ({
       ...prevValues,
       [index]: value,
     }));
@@ -117,7 +117,7 @@ function ResponsiveExample() {
       className='my-5 m-auto '
       style={{ maxHeight: '75vh', overflowY: 'auto', width: '90%' }}
     >
-      <table className='table p-5'>
+      <table className='table p-5  table-responsive' > 
         <thead
           style={{
             backgroundColor: ' #5498',
@@ -145,7 +145,12 @@ function ResponsiveExample() {
 
         <tbody style={{ paddingTop: '30px !important' }}>
           {tableData.map((data, index) => (
-            <tr key={index} className={`py-3 ${index === selectedRowIndex ? 'selected-row' : ''}`}>
+            <tr
+              key={index}
+              className={`py-3 ${
+                index === selectedRowIndex ? 'selected-row' : ''
+              }`}
+            >
               <td
                 className='d-flex text-secondary py-3'
                 role='button'
@@ -175,7 +180,7 @@ function ResponsiveExample() {
                     id='Selection'
                     className='text-muted rounded-3 p-2 w-100'
                     value={selectedValues[index] || ''}
-                    onChange={(e) => handleDropdownChange(e, index)}
+                    onChange={e => handleDropdownChange(e, index)}
                   >
                     <option>Action</option>
                     <option value='Enable'>Enable</option>

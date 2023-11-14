@@ -3,11 +3,16 @@ import { Row, Col } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import RRCombinedCard from './CombinedCard.jsx';
+import DelCard from '../../Listings/components/DeleteItemcard.jsx';
 export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [delshow, delsetShow] = useState(false);
+  const delhandleClose = () => delsetShow(false);
+  const delhandleShow = () => delsetShow(true);
   // Define variables to store background color and icons based on headtitle
   let backgroundColor;
   let rateIcon;
@@ -17,18 +22,42 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
     backgroundColor = '#5D86C2';
     rateIcon = (
       <>
-        <img src='./image/rateselectionicon.svg' />
+        <img
+          src='./image/rateselectionicon.svg'
+          variant='primary'
+          onClick={() => {
+            handleShow();
+          }}
+          role='button'
+        />
         <img src='./image/rateimageicon.svg' className='ms-3' />
-        <img src='./userdeleticon.svg' className='ms-3' />
+        <img
+          src='./userdeleticon.svg'
+          className='ms-3'
+          variant='primary'
+          onClick={delhandleShow}
+        />
       </>
     );
   } else if (headtitle === 'Reclain') {
     backgroundColor = '#CE605A';
     reclainIcon = (
       <>
-        <img src='./Userselecticon.svg' />
+        <img
+          src='./Userselecticon.svg'
+          variant='primary'
+          onClick={() => {
+            handleShow();
+          }}
+          role='button'
+        />
         <img src='./userImageicon.svg' className='ms-3' />
-        <img src='./userdeleticon.svg' className='ms-3' />
+        <img
+          src='./userdeleticon.svg'
+          className='ms-3'
+          variant='primary'
+          onClick={delhandleShow}
+        />
       </>
     );
   }
@@ -36,11 +65,6 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
   return (
     <>
       <div
-        variant='primary'
-        onClick={() => {
-          handleShow();
-        }}
-        role='button'
         className='ms-4 rounded-4 p-2 mt-4'
         style={{ backgroundColor: '#F7F8F9' }}
       >
@@ -50,7 +74,7 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
             xl={2}
             style={{ backgroundColor: backgroundColor || '#F7F8F9' }}
           >
-            <p >{headtitle}</p>
+            <p>{headtitle}</p>
           </Col>
         </Row>
         <Row>
@@ -117,6 +141,9 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
           pmodal={handleClose}
           backgroundColor={backgroundColor}
         />
+      </Modal>
+      <Modal show={delshow} centered>
+        <DelCard onHide={delhandleClose} />
       </Modal>
     </>
   );

@@ -1,6 +1,12 @@
-import React from 'react';
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import { Row, Col } from 'react-bootstrap';
+import CongratulationCard from '../Components/Success.jsx'
 export const CreateNewUser = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div>
       <Row>
@@ -99,11 +105,16 @@ export const CreateNewUser = () => {
             <button
               className='border w-25 p-2 rounded-3 text-white'
               style={{ backgroundColor: '#868E96' }}
+              variant='primary'
+              onClick={handleShow}
             >
               Save
             </button>
           </div>
         </Col>
+        <Modal show={show} centered>
+          <CongratulationCard  onHide={handleClose}/>
+        </Modal>
       </Row>
     </div>
   );

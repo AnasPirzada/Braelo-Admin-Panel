@@ -3,14 +3,10 @@ import { Row, Col } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import ConfrimCard from './confirmDeleteCard.jsx';
 
-export const DeleteItem = ({onHide}) => {
+export const DeleteItem = ({ onHide }) => {
   const [isSectionOpen, setSectionOpen] = useState(true);
   const [modalShow, setModalShow] = useState(false);
   const [nextModalShow, setNextModalShow] = useState(false);
-
-  // const handleCloseSection = () => {
-  //   setSectionOpen(false);
-  // };
 
   const handleNextModalShow = () => {
     setModalShow(false);
@@ -19,6 +15,11 @@ export const DeleteItem = ({onHide}) => {
 
   const handleNextModalClose = () => {
     setNextModalShow(false);
+  };
+
+  const handleCancelClick = () => {
+    // Call the onHide function to close the modal
+    onHide();
   };
   return (
     <>
@@ -48,16 +49,18 @@ export const DeleteItem = ({onHide}) => {
             >
               Yes, I do
             </button>
-            <h6 className='mt-3 text-muted'>Cancel</h6>
+            <h6 className='mt-3 text-muted' onClick={handleCancelClick}>
+              Cancel
+            </h6>
           </div>
         </div>
       )}
 
       <Row>
         <Col md={6} xl={6} xs={12}>
-          <Modal show={nextModalShow} centered >
+          <Modal show={nextModalShow} centered>
             <Modal.Body>
-              <ConfrimCard onHide={handleNextModalClose}/>
+              <ConfrimCard onHide={handleNextModalClose} />
             </Modal.Body>
           </Modal>
         </Col>

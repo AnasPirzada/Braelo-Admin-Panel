@@ -53,6 +53,7 @@ export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
     handleCloseFirstModal(); // Close the current modal
   };
   const handleClose = () => setShow(false);
+  const [show, setShow] = useState(false);
 
   return (
     <>
@@ -230,8 +231,8 @@ export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
         </Modal>
       )}
       {showDeleteModal && (
-        <Modal show={showDeleteModal} centered >
-          <DeletedSelection onHide={handleClose}/>
+        <Modal show={showDeleteModal} centered>
+          <DeletedSelection onHide={handleClose} />
         </Modal>
       )}
     </>
