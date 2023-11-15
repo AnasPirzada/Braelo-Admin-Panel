@@ -4,7 +4,13 @@ import Rating from 'react-rating-stars-component';
 import Modal from 'react-bootstrap/Modal';
 import Confirm from './ConfirmMessage.jsx';
 import DeletedSelection from '../../Listings/components/DeleteItemcard.jsx';
-export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
+import ArchieveCard from '../Components/ArchieveCard.jsx';
+export const RRCombinedCard = ({
+  headtitle,
+  backgroundColor,
+  pmodal,
+  onHide,
+}) => {
   const [showFirstModal, setShowFirstModal] = useState(true);
   const [showSecondModal, setShowSecondModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -52,9 +58,11 @@ export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
     handleShowDeleteModal(); // Open the new delete modal
     handleCloseFirstModal(); // Close the current modal
   };
-  const handleClose = () => setShow(false);
-  const [show, setShow] = useState(false);
 
+  const [arcshow, arcsetShow] = useState(false);
+
+  const archandleClose = () => arcsetShow(false);
+  const archandleShow = () => arcsetShow(true);
   return (
     <>
       {showFirstModal && (
@@ -165,6 +173,12 @@ export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
               <img
                 src='./image/card/imageCard.svg'
                 alt='Image'
+                variant='primary'
+                role='button'
+                onClick={() => {
+                  archandleShow();
+                  onHide();
+                }}
                 className='ms-3'
               />
               <img
@@ -232,9 +246,12 @@ export const RRCombinedCard = ({ headtitle, backgroundColor, pmodal }) => {
       )}
       {showDeleteModal && (
         <Modal show={showDeleteModal} centered>
-          <DeletedSelection onHide={handleClose} />
+          <DeletedSelection />
         </Modal>
       )}
+      <Modal show={arcshow} onHide={archandleClose}>
+        <ArchieveCard onHide={archandleClose} />
+      </Modal>
     </>
   );
 };

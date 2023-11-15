@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import ConfrimCard from './confirmDeleteCard.jsx';
 
-export const DeleteItem = ({ onHide }) => {
+export const DeleteItem = () => {
   const [isSectionOpen, setSectionOpen] = useState(true);
   const [modalShow, setModalShow] = useState(false);
   const [nextModalShow, setNextModalShow] = useState(false);
@@ -21,6 +21,7 @@ export const DeleteItem = ({ onHide }) => {
     // Call the onHide function to close the modal
     onHide();
   };
+  
   return (
     <>
       {isSectionOpen && (
@@ -29,7 +30,7 @@ export const DeleteItem = ({ onHide }) => {
             <img
               src='/public/X sign.svg'
               style={{ cursor: 'pointer' }}
-              onClick={onHide}
+              // onClick={closeModal}
               alt='exit'
             />
           </div>

@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import RRCombinedCard from './CombinedCard.jsx';
+import ArchieveCard from '../Components/ArchieveCard.jsx';
 import DelCard from '../../Listings/components/DeleteItemcard.jsx';
 export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
   const [show, setShow] = useState(false);
@@ -13,6 +14,12 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
   const [delshow, delsetShow] = useState(false);
   const delhandleClose = () => delsetShow(false);
   const delhandleShow = () => delsetShow(true);
+
+  const [arcshow, arcsetShow] = useState(false);
+
+  const archandleClose = () => arcsetShow(false);
+  const archandleShow = () => arcsetShow(true);
+
   // Define variables to store background color and icons based on headtitle
   let backgroundColor;
   let rateIcon;
@@ -30,10 +37,17 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
           }}
           role='button'
         />
-        <img src='./image/rateimageicon.svg' className='ms-3' />
+        <img
+          src='./image/rateimageicon.svg'
+          className='ms-3'
+          variant='primary'
+          role='button'
+          onClick={archandleShow}
+        />
         <img
           src='./userdeleticon.svg'
           className='ms-3'
+          role='button'
           variant='primary'
           onClick={delhandleShow}
         />
@@ -51,11 +65,18 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
           }}
           role='button'
         />
-        <img src='./userImageicon.svg' className='ms-3' />
+        <img
+          src='./userImageicon.svg'
+          className='ms-3'
+          role='button'
+          variant='primary'
+          onClick={archandleShow}
+        />
         <img
           src='./userdeleticon.svg'
           className='ms-3'
           variant='primary'
+          role='button'
           onClick={delhandleShow}
         />
       </>
@@ -144,6 +165,9 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
       </Modal>
       <Modal show={delshow} centered>
         <DelCard onHide={delhandleClose} />
+      </Modal>
+      <Modal show={arcshow} centered>
+        <ArchieveCard onHide={archandleClose} />
       </Modal>
     </>
   );

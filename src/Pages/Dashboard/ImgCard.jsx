@@ -3,12 +3,12 @@ import Card from 'react-bootstrap/Card';
 const ImgCard = (props) => {
   return (
  <>
-   <Card
+   <Card className='mt-4'
         style={{
             margin: '5px',
           width: '100%',
-          height: '183.23px',
-          backgroundColor: '#FDE09680',
+          height: '250px',
+          backgroundColor: 'rgba(253, 224, 150, 0.5)'
         }}
       >
         <Card.Body className='text-center'>
@@ -20,7 +20,7 @@ const ImgCard = (props) => {
               justifyContent: 'center',
             }}
           >
-            <div
+            <div className='mt-5'
               style={{
                 backgroundColor: '#EE9E03',
                 borderRadius: '50%',
