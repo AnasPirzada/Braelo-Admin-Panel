@@ -6,7 +6,7 @@ import LineCharts from './LineChart';
 import ImgCard from './ImgCard';
 import HalfPieChart from './HalfPieChart';
 import ListofPerson from './ListofPerson';
-
+import { Link } from 'react-router-dom';
 const Dashboard = () => {
   return (
     <>
@@ -36,24 +36,30 @@ const Dashboard = () => {
                 </Row>
                 <Row>
                   <Col xs={6} md={3}>
-                    
-                    <ImgCard
-                      title='New Listing'
-                      img='/media-library-folder.1.svg'
-                    />
-                
+                    <Link to='/NewListing'>
+                      <ImgCard
+                        title='New Listing'
+                        img='/media-library-folder.1.svg'
+                      />
+                    </Link>
                   </Col>
                   <Col xs={6} md={3}>
-                    <ImgCard title='New Ad' img='/ads.svg' />
+                    <Link to='/NewAdd'>
+                      <ImgCard title='New Ad' img='/ads.svg' />
+                    </Link>
                   </Col>
                   <Col xs={6} md={3}>
-                    <ImgCard
-                      title='New Spotlight'
-                      img='/Loading, Plus, Circle, Add.svg'
-                    />
+                    <Link to='/NewSpotLight'>
+                      <ImgCard
+                        title='New Spotlight'
+                        img='/Loading, Plus, Circle, Add.svg'
+                      />
+                    </Link>
                   </Col>
                   <Col xs={6} md={3}>
-                    <ImgCard title='New Post' img='/postimg.svg' />
+                    <Link to='/NewPost'>
+                      <ImgCard title='New Post' img='/postimg.svg' />
+                    </Link>
                   </Col>
                 </Row>
                 <Row>

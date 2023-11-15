@@ -16,15 +16,20 @@ import Archive from './Pages/Archive/index';
 import PrivacyPolicy from './Pages/Privacy Policy/index';
 import AddBanner from './Pages/Add Banner';
 import CreateBanner from './Pages/Advertising/CreateBanner.jsx';
+import NewBanner from './Pages/Advertising/CreateBanner.jsx';
 import AdvertisingPage from './Pages/Advertising/Advertising.jsx';
 import CreateSpotlight from './Pages/Advertising/createSpotlight.jsx';
+import NewSpotLight from './Pages/Advertising/createSpotlight.jsx';
 import CreateTextAdd from './Pages/Advertising/CreateTextAdd.jsx';
+import NewAdd from './Pages/Advertising/CreateTextAdd.jsx';
 import CreateNewMessage from './Pages/Notifications/index.jsx';
 import Advices from './Pages/Notifications/page/CreateNewMessage.jsx';
 import Actionsbutton from './Pages/Listings/page/ActionsButton.jsx';
+import NewListing from './Pages/Listings/page/CreateListing.jsx';
 import CreateListing from './Pages/Listings/page/CreateListing.jsx';
 import CreateListingPreview from './Pages/Listings/page/CreateListingPreview.jsx';
 import AddNewPost from './Pages/News/page/AddNewPost.jsx';
+import NewPost from './Pages/News/page/AddNewPost.jsx';
 import CreateNewUser from './Pages/System/pages/CreateUser.jsx';
 
 function App() {
@@ -47,18 +52,23 @@ function App() {
         <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
         <Route path='/AddBanner' element={<AddBanner />} />
         <Route path='/CreateBanner' element={<CreateBanner />} />
+        <Route path='/NewBanner' element={<NewBanner />} />
         <Route path='/AdvertisingPage' element={<AdvertisingPage />} />
         <Route path='/CreateSpotlight' element={<CreateSpotlight />} />
+        <Route path='/NewSpotLight' element={<NewSpotLight />} />
         <Route path='/CreateTextAdd' element={<CreateTextAdd />} />
+        <Route path='/NewAdd' element={<NewAdd />} />
         <Route path='/CreateNewMessage' element={<CreateNewMessage />} />
         <Route path='/Advices' element={<Advices />} />
         <Route path='/Actionsbutton' element={<Actionsbutton />} />
         <Route path='/CreateListing' element={<CreateListing />} />
+        <Route path='/NewListing' element={<NewListing />} />
         <Route
           path='/CreateListingPreview'
           element={<CreateListingPreview />}
         />
         <Route path='/AddNewPost' element={<AddNewPost />} />
+        <Route path='/NewPost' element={<NewPost />} />
         <Route path='/CreateNewUser' element={<CreateNewUser />} />
       </Routes>
     </BrowserRouter>
