@@ -46,14 +46,10 @@ const CreateBanner = () => {
     // Do something with the selected file (e.g., upload or display it)
   };
   //------------------------- Modal---------------------------------------
-  const [modalShow, setModalShow] = useState(false);
-  const [nextModalShow, setNextModalShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-  // Function to handle opening the "Next" modal
-  const handleNextModalShow = () => {
-    setModalShow(false); // Close the current modal
-    setNextModalShow(true); // Open the "Next" modal
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Container fluid className='  h-100'>
@@ -71,7 +67,7 @@ const CreateBanner = () => {
               <NaveBar />
             </Row>
             <Row>
-              <BannerTab  activeBtn='newBanner'/>
+              <BannerTab activeBtn='newBanner' />
             </Row>
             <Row>
               <h4 className='mt-3 text-muted '>Create new banner</h4>
@@ -132,7 +128,7 @@ const CreateBanner = () => {
                     </div>
                     <div
                       className='d-flex flex-wrap'
-                      style={{ height: 'auto',width:'100%' }}
+                      style={{ height: 'auto', width: '100%' }}
                     >
                       {keywords.map((keyword, index) => (
                         <div
@@ -141,9 +137,9 @@ const CreateBanner = () => {
                           style={{
                             backgroundColor: 'rgba(254, 240, 203, 0.7)',
                             color: '#A77C0E',
-                            cursor: 'pointer', 
-                            width:'auto',
-                            height:'28px',
+                            cursor: 'pointer',
+                            width: 'auto',
+                            height: '28px',
                           }}
                           onClick={() => removeKeyword(index)}
                         >
@@ -161,7 +157,8 @@ const CreateBanner = () => {
                 <div
                   className='d-flex flex-column justify-content-center align-items-center w-100 p-4'
                   style={{
-                    border: '2px dotted rgba(205, 148, 3, 0.5)', height:'300px',
+                    border: '2px dotted rgba(205, 148, 3, 0.5)',
+                    height: '300px',
                   }}
                 >
                   <Col xs='auto'>
@@ -170,7 +167,11 @@ const CreateBanner = () => {
                       src='./BannerFilesIcon.svg'
                       alt='files icon'
                       onClick={handleIconClick}
-                      style={{ cursor: 'pointer',marginTop:'50px',width:'150%' }}
+                      style={{
+                        cursor: 'pointer',
+                        marginTop: '50px',
+                        width: '150%',
+                      }}
                     />
                     <input
                       type='file'
@@ -210,8 +211,8 @@ const CreateBanner = () => {
                 <Col>
                   <button
                     type='button'
-                    variant='secondary'
-                    onClick={handleNextModalShow}
+                    variant='primary'
+                    onClick={handleShow}
                     className='ms-2 w-100 rounded-3 p-2 border-0 text-white '
                     style={{ backgroundColor: '#596068' }}
                   >
@@ -219,12 +220,8 @@ const CreateBanner = () => {
                   </button>
                 </Col>
                 <div>
-                  <Modal
-                    show={nextModalShow}
-                    onHide={() => setNextModalShow(false)}
-                    centered
-                  >
-                    <ModalCard onHide={() => setNextModalShow(false)} />
+                  <Modal show={show} centered onHide={handleClose}>
+                    <ModalCard onHide={handleClose} />
                   </Modal>
                 </div>
               </Col>

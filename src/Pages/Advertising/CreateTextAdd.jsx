@@ -6,15 +6,11 @@ import BannerTab from './BannerTab';
 import ModalCard from './Modal/TextAdd/CreateTextAdd.jsx';
 import Modal from 'react-bootstrap/Modal';
 const CreateTextAdd = () => {
-    //------------------------- Modal---------------------------------------
-    const [modalShow, setModalShow] = useState(false);
-    const [nextModalShow, setNextModalShow] = useState(false);
-  
-    // Function to handle opening the "Next" modal
-    const handleNextModalShow = () => {
-      setModalShow(false); // Close the current modal
-      setNextModalShow(true); // Open the "Next" modal
-    };
+  //------------------------- Modal---------------------------------------
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Container fluid className='  h-100'>
@@ -32,7 +28,7 @@ const CreateTextAdd = () => {
               <NaveBar />
             </Row>
             <Row>
-              <BannerTab activeBtn='newAdd'/>
+              <BannerTab activeBtn='newAdd' />
             </Row>
             <Row className='mt-4'>
               <h4 className='mt-3 text-muted '>Create new Text Ad</h4>
@@ -65,8 +61,8 @@ const CreateTextAdd = () => {
                   </Col>
                   <Col lg={3} xl={3} xs={12}>
                     <button
-                      variant='secondary'
-                      onClick={handleNextModalShow}
+                      variant='primary'
+                      onClick={handleShow}
                       className=' w-100 p-1 border-0 rounded-2 text-white'
                       style={{ backgroundColor: '#CD9403' }}
                     >
@@ -74,14 +70,10 @@ const CreateTextAdd = () => {
                     </button>
                   </Col>
                   <div>
-                  <Modal
-                    show={nextModalShow}
-                    onHide={() => setNextModalShow(false)}
-                    centered
-                  >
-                    <ModalCard onHide={() => setNextModalShow(false)} />
-                  </Modal>
-                </div>
+                    <Modal show={show} onHide={handleClose} centered>
+                      <ModalCard onHide={handleClose} />
+                    </Modal>
+                  </div>
                 </Row>
               </Col>
             </Row>

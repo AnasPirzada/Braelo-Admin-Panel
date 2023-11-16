@@ -7,7 +7,7 @@ import '../Components/PromotionCard.css';
 export const Archived = () => {
   const [isActive, setIsActive] = useState(false);
   const [selected, setIsSelected] = useState('Massive actions');
-  const [displayData, setDisplayData] = useState(< PromotionCard/>); // Initialize with "hello" message
+  const [displayData, setDisplayData] = useState(<PromotionCard />); // Initialize with "hello" message
   const [isActivee, setIsActivee] = useState(false);
   const [selectedd, setIsSelectedd] = useState('Filter by time');
   // Define a function to handle dropdown item clicks
@@ -107,7 +107,7 @@ export const Archived = () => {
                     onClick={() => handleDropdownItemClick('Delete')}
                     className='item'
                   >
-                     Delete
+                    Delete
                   </div>
                   <div
                     onClick={() => handleDropdownItemClick('Enable')}
@@ -124,7 +124,8 @@ export const Archived = () => {
                 <FormControl
                   type='search'
                   placeholder='Search message'
-                  className='border rounded-3 p-2 text-muted'
+                  className='border rounded-3 p-2 text-muted mt-2'
+                  style={{ padding: '5px !important ' }}
                 />
                 <img
                   src='./Seacrh.svg'
@@ -138,7 +139,7 @@ export const Archived = () => {
               </InputGroup>
             </Col>
             <Col md={2} xl={2} xs={12}>
-              <button className='border rounded-3 p-2 bg-dark w-100 text-white'>
+              <button className='border rounded-3 p-2 bg-dark w-100 text-white mt-2'>
                 Filter
               </button>
             </Col>

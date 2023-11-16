@@ -3,15 +3,12 @@ import { Row, Col, InputGroup, FormControl } from 'react-bootstrap';
 import PromotionCard from '../Components/PromotionCard.jsx';
 import DisableCard from '../Components/DisableCard.jsx';
 import '../Components/PromotionCard.css';
-// import PromotionCard from '../Components/PromotionCard.jsx';
-// import DisableCard from '../Components/DisableCard.jsx';
 export const MessageSent = () => {
   const [isActive, setIsActive] = useState(false);
   const [selected, setIsSelected] = useState('Massive actions');
   const [displayData, setDisplayData] = useState(<PromotionCard />); // Initialize with "hello" message
   const [isActivee, setIsActivee] = useState(false);
   const [selectedd, setIsSelectedd] = useState('Filter by time');
-  // Define a function to handle dropdown item clicks
   const handleDropdownItemClick = data => {
     setIsSelected(data);
     setIsActive(false);
@@ -129,11 +126,12 @@ export const MessageSent = () => {
               </div>
             </Col>
             <Col md={4} xl={4} xs={12}>
-              <InputGroup className='mb-3'>
+              <InputGroup className='mb-3 mt-2'>
                 <FormControl
                   type='search'
                   placeholder='Search message'
-                  className='border rounded-3 p-2 text-muted'
+                  className='border rounded-3 text-muted'
+                  style={{ padding: '10px ' }}
                 />
                 <img
                   src='./Seacrh.svg'
@@ -147,7 +145,7 @@ export const MessageSent = () => {
               </InputGroup>
             </Col>
             <Col md={2} xl={2} xs={12}>
-              <button className='border rounded-3 p-2 bg-dark w-100 text-white'>
+              <button className='border rounded-3 p-2 bg-dark w-100 mt-2 text-white'>
                 Filter
               </button>
             </Col>

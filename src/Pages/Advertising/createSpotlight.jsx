@@ -4,7 +4,7 @@ import NaveBar from '../../Components/NaveBar.jsx';
 import BannerTab from './BannerTab';
 import Modal from 'react-bootstrap/Modal';
 import AdvTabs from './AdvTabs';
-import ModalCard from './Modal/spotlight/next.jsx'
+import ModalCard from './Modal/spotlight/next.jsx';
 import { Container, Row, Col } from 'react-bootstrap';
 export const CreateSpotlight = () => {
   const fileInputRef = useRef(null);
@@ -19,14 +19,10 @@ export const CreateSpotlight = () => {
     // Do something with the selected file (e.g., upload or display it)
   };
   //------------------------- Modal---------------------------------------
-  const [modalShow, setModalShow] = useState(false);
-  const [nextModalShow, setNextModalShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-  // Function to handle opening the "Next" modal
-  const handleNextModalShow = () => {
-    setModalShow(false); // Close the current modal
-    setNextModalShow(true); // Open the "Next" modal
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Container fluid className='  h-100'>
@@ -44,7 +40,7 @@ export const CreateSpotlight = () => {
               <NaveBar />
             </Row>
             <Row>
-              <BannerTab  activeBtn='newSpotlight'/>
+              <BannerTab activeBtn='newSpotlight' />
             </Row>
             <Row className='mt-4'>
               <Row>
@@ -120,8 +116,7 @@ export const CreateSpotlight = () => {
                   <Col>
                     <p className='text-muted text-center fs-6 mt-2'>
                       <span style={{ fontSize: '12px' }}>
-                      Required dimensions 
-                        1080x1920 pixels
+                        Required dimensions 1080x1920 pixels
                       </span>
                     </p>
                   </Col>
@@ -158,25 +153,24 @@ export const CreateSpotlight = () => {
                   <Col>
                     <p className='text-muted text-center fs-6 mt-2'>
                       <span style={{ fontSize: '12px' }}>
-                      Required dimensions 150x150 pixels
+                        Required dimensions 150x150 pixels
                       </span>
                     </p>
                   </Col>
                 </div>
               </Col>
               <p className='text-end mt-2'>
-                <img src='./spotlightbutton link.svg' alt='? icon'/>
+                <img src='./spotlightbutton link.svg' alt='? icon' />
               </p>
             </Row>
             <Row>
               <Col>
-              <label className='text-muted'>Button Link</label>
-                    <input
-                      placeholder='wa.me/+1 389XXXXXXXXXXX  |'
-                      className='border border-1 rounded-3 p-2 w-100 '
-                    />
+                <label className='text-muted'>Button Link</label>
+                <input
+                  placeholder='wa.me/+1 389XXXXXXXXXXX  |'
+                  className='border border-1 rounded-3 p-2 w-100 '
+                />
               </Col>
-          
             </Row>
             <Row className='mt-4 mb-4'>
               <Col lg={8}></Col>
@@ -199,8 +193,7 @@ export const CreateSpotlight = () => {
                 <Col>
                   <button
                     type='button'
-                    variant='secondary'
-                    onClick={handleNextModalShow}
+                    variant="primary" onClick={handleShow}
                     className='ms-2 w-100 rounded-3 p-2 border-0 text-white '
                     style={{ backgroundColor: '#596068' }}
                   >
@@ -209,11 +202,10 @@ export const CreateSpotlight = () => {
                 </Col>
                 <div>
                   <Modal
-                    show={nextModalShow}
-                    onHide={() => setNextModalShow(false)}
+                   show={show} onHide={handleClose}
                     centered
                   >
-                    <ModalCard onHide={() => setNextModalShow(false)} />
+                    <ModalCard  onHide={handleClose}/>
                   </Modal>
                 </div>
               </Col>

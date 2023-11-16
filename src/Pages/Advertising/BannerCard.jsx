@@ -1,17 +1,24 @@
+import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import { Row, Col } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
-
+import Modal from 'react-bootstrap/Modal';
+import Delete from './Modal/Delet Modal/Delete.jsx';
 const BannerCard = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
-    
-        <Card
+      <Card
         className='text-left border-0 bannercard'
         style={{ width: '100%', height: '90%' }}
       >
         <Row className='my-2'>
           <Col className='d-flex justify-content-end me-3'>
+          
             <Badge
               className='bg bg-secondary rounded-circle d-flex justify-content-center align-items-center'
               style={{
@@ -43,6 +50,7 @@ const BannerCard = () => {
                 alt='Icon 2'
               />
             </Badge>
+
             <Badge
               className='bg bg-danger d-flex justify-content-center align-items-center'
               style={{
@@ -51,6 +59,9 @@ const BannerCard = () => {
                 width: '38px',
                 height: '35px',
               }}
+              role='button'
+              variant='primary'
+              onClick={handleShow}
             >
               <img
                 src='./Trash, Delete, Bin.svg'
@@ -58,6 +69,7 @@ const BannerCard = () => {
                 alt='Icon 3'
               />
             </Badge>
+
           </Col>
         </Row>
         <Card.Body>
@@ -68,7 +80,7 @@ const BannerCard = () => {
             <p className='my-0' style={{ width: '50%', color: '#fff' }}>
               Check out our plans and boost your sales!
             </p>
-            <button className='cardbtn rounded-4 p-2 border-0'>
+            <button className='cardbtn rounded-4 p-2 border-0 mt-3'>
               Advertise Now
             </button>
             <p
@@ -86,10 +98,11 @@ const BannerCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-    
-    
+      <Modal show={show} centered >
+        <Delete onHide={handleClose}/>
+      </Modal>
     </>
-  )
-}
+  );
+};
 
-export default BannerCard
+export default BannerCard;
