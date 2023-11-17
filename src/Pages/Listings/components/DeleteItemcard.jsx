@@ -21,7 +21,7 @@ export const DeleteItem = () => {
     // Call the onHide function to close the modal
     onHide();
   };
-  
+
   return (
     <>
       {isSectionOpen && (

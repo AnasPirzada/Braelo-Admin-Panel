@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import RRCombinedCard from './CombinedCard.jsx';
 import ArchieveCard from '../Components/ArchieveCard.jsx';
-import DelCard from '../../Listings/components/DeleteItemcard.jsx';
+import DelCard from '../../Listings/components/Delet Modal/Delete.jsx';
 export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
   const [show, setShow] = useState(false);
 
@@ -156,11 +156,12 @@ export const CardUserrep = ({ imageUrl, title, message, date, headtitle }) => {
           </div>
         </Row>
       </div>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} >
         <RRCombinedCard
           headtitle={headtitle}
           pmodal={handleClose}
           backgroundColor={backgroundColor}
+          onHide={handleClose}
         />
       </Modal>
       <Modal show={delshow} centered>

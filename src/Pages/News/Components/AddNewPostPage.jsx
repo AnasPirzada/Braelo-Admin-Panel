@@ -75,14 +75,10 @@ export const AddNewPostPage = () => {
     setKeywords(updatedKeywords);
   };
   //------------------------- Modal---------------------------------------
-  const [modalShow, setModalShow] = useState(false);
-  const [nextModalShow, setNextModalShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-  // Function to handle opening the "Next" modal
-  const handleNextModalShow = () => {
-    setModalShow(false); // Close the current modal
-    setNextModalShow(true); // Open the "Next" modal
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Row>
@@ -365,7 +361,7 @@ export const AddNewPostPage = () => {
             </Col>
             <Col xl={6} xs={12}>
               <div className='w-100' style={{ height: '300px' }}>
-                <h6 className='text-muted my-3'>
+                <h6 className='text-muted my-3 my-md-1'>
                   Keywords{' '}
                   <small className='ms-3 ' style={{ fontSize: '10px' }}>
                     {' '}
@@ -415,11 +411,10 @@ export const AddNewPostPage = () => {
       </Row>
       <Row className='m-4'>
         <Col md={5}></Col>
-        <Col md={7} className=' h-100 d-flex mt-5 mt-md-0'>
+        <Col md={7} className=' h-100 d-flex mt-5 mt-md-0 '>
           <Col md={2}>
             <button
-              variant='secondary'
-              onClick={handleNextModalShow}
+            variant="primary" onClick={handleShow}
               className='py-2 px-4 border-0 rounded-3 text-white w-100'
               style={{ backgroundColor: '#868E96' }}
             >
@@ -432,11 +427,10 @@ export const AddNewPostPage = () => {
                 backgroundColor: 'rgba(233, 236, 239, 0.19)',
                 backdropFilter: 'blur(14.5px)',
               }}
-              show={nextModalShow}
-              onHide={() => setNextModalShow(false)}
+              show={show} onHide={handleClose}
               centered
             >
-              <ScheduleCard onHide={() => setNextModalShow(false)} />
+              <ScheduleCard  onHide={handleClose} />
             </Modal>
           </div>
           <Col md={2}>

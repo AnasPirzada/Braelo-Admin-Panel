@@ -7,7 +7,7 @@ export const Request = () => {
       <Row className='d-flex justify-content-between align-items-center m-3'>
         <Col xl={4} xs={12} className='mt-3 mt-md-0'>
           <div
-            className='d-flex p-2 rounded-4  justify-content-center align-items-center w-100'
+            className='d-flex p-2 rounded-4  justify-content-between justify-content-md-center  align-items-center w-100'
             style={{ backgroundColor: '#F7F8F9' }}
           >
             <img src='./sadsmilie.svg' />
@@ -19,7 +19,7 @@ export const Request = () => {
         <Col xl={4} xs={12} className='mt-3 mt-md-0'>
           {' '}
           <div
-            className='d-flex p-2 rounded-4  justify-content-center align-items-center w-100'
+            className='d-flex p-2 rounded-4  justify-content-between justify-content-md-center  align-items-center align-items-center w-100'
             style={{ backgroundColor: '#F7F8F9' }}
           >
             <img src='./happysmilie.svg' />
@@ -30,7 +30,7 @@ export const Request = () => {
         </Col>
         <Col xl={4} xs={12} className='mt-3 mt-md-0'>
           <div
-            className='d-flex p-2 rounded-4  justify-content-center align-items-center w-100'
+            className='d-flex p-2 rounded-4  justify-content-between justify-content-md-center  align-items-center align-items-center w-100'
             style={{ backgroundColor: '#F7F8F9' }}
           >
             <img src='./excitedsmilie.svg' />

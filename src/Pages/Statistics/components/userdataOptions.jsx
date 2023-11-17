@@ -4,7 +4,7 @@ export const userdataOptions = (props) => {
   return (
     <div>
       <Row>
-        <Col xl={2}>
+        <Col xl={2} className='mt-0 mt-md-0'>
           <div>
             <select
               name='cars'
@@ -18,7 +18,7 @@ export const userdataOptions = (props) => {
             </select>
           </div>
         </Col>
-        <Col xl={2}>
+        <Col xl={2} className='mt-3 mt-md-0'>
           <div>
             <select
               name='cars'
@@ -33,7 +33,7 @@ export const userdataOptions = (props) => {
           </div>
         </Col>
 
-        <Col xl={3}>
+        <Col xl={3} className='mt-3 mt-md-0'>
           <div>
             <select
               name='cars'
@@ -48,7 +48,7 @@ export const userdataOptions = (props) => {
           </div>
         </Col>
 
-        <Col xl={3}>
+        <Col xl={3} className='mt-3 mt-md-0'>
           <div>
             <select
               name='cars'
@@ -62,9 +62,9 @@ export const userdataOptions = (props) => {
             </select>
           </div>
         </Col>
-        <Col xl={2}>
+        <Col xl={2} className='mt-3 mt-md-0'>
           <button
-            className='w-100 border-0 p-2 text-white rounded-4'
+            className='w-100 border-0 p-2 text-white rounded-3'
             style={{ backgroundColor: '#596068' }}
           >
             Filter
@@ -89,8 +89,8 @@ export const userdataOptions = (props) => {
             </select>
           </div>
         </Col>
-        <Col xl={9}>
-          <div className='border border-1 d-flex p-2 rounded-4 w-100'>
+        <Col xl={9} className='mt-3 mt-md-0'>
+          <div className='border border-1 d-flex p-2 rounded-3 w-100'>
             <input type='search' />
             <img src='./Seacrh.svg' />
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import OtherTabs from '../Components/OtherTabs.jsx';
-import { Row,Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import ReclainCard from '../Components/ReclainCard.jsx';
 export const tabReclains = () => {
   return (

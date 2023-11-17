@@ -26,11 +26,14 @@ import CreateNewMessage from './Pages/Notifications/index.jsx';
 import Advices from './Pages/Notifications/page/CreateNewMessage.jsx';
 import Actionsbutton from './Pages/Listings/page/ActionsButton.jsx';
 import NewListing from './Pages/Listings/page/CreateListing.jsx';
+import EditListing from './Pages/Listings/page/CreateListing.jsx';
 import CreateListing from './Pages/Listings/page/CreateListing.jsx';
 import CreateListingPreview from './Pages/Listings/page/CreateListingPreview.jsx';
 import AddNewPost from './Pages/News/page/AddNewPost.jsx';
 import NewPost from './Pages/News/page/AddNewPost.jsx';
 import CreateNewUser from './Pages/System/pages/CreateUser.jsx';
+import EditUser from './Pages/System/pages/CreateUser.jsx';
+import EditIllustrations from './Pages/System/pages/CreateIllustrationsUser.jsx';
 
 function App() {
   return (
@@ -63,6 +66,7 @@ function App() {
         <Route path='/Actionsbutton' element={<Actionsbutton />} />
         <Route path='/CreateListing' element={<CreateListing />} />
         <Route path='/NewListing' element={<NewListing />} />
+        <Route path='/EditListing' element={<EditListing />} />
         <Route
           path='/CreateListingPreview'
           element={<CreateListingPreview />}
@@ -70,6 +74,8 @@ function App() {
         <Route path='/AddNewPost' element={<AddNewPost />} />
         <Route path='/NewPost' element={<NewPost />} />
         <Route path='/CreateNewUser' element={<CreateNewUser />} />
+        <Route path='/EditUser' element={<EditUser />} />
+        <Route path='/EditIllustrations' element={<EditIllustrations />} />
       </Routes>
     </BrowserRouter>
   );

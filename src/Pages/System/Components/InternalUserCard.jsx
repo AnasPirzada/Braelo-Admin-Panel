@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import DelCard from '../../Listings/components/DeleteItemcard.jsx';
+import DelCard from '../../Listings/components/Delet Modal/Delete.jsx';
+import { Link } from 'react-router-dom';
 export const InternalUserCard = ({ imageSrc, name, role }) => {
   const [show, setShow] = useState(false);
 
@@ -46,7 +47,9 @@ export const InternalUserCard = ({ imageSrc, name, role }) => {
         </div>
 
         <div className='m-auto w-50 d-flex justify-content-end align-items-end '>
-          <img src='/public/Systemiconpen.svg' alt='' />
+          <Link to='/EditUser'>
+            <img src='/public/Systemiconpen.svg' alt='' />
+          </Link>
           <img
             src='/public/Systemicondel.svg'
             alt=''
@@ -58,7 +61,7 @@ export const InternalUserCard = ({ imageSrc, name, role }) => {
         </div>
       </div>
       <Modal show={show} centered onHide={handleClose}>
-        <DelCard  onHide={handleClose}/>
+        <DelCard onHide={handleClose} />
       </Modal>
     </div>
   );

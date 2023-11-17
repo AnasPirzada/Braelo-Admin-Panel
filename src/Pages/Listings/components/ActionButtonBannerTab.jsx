@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import DeleteCard from './DeleteItemcard.jsx';
+import DeleteCard from '../components/Delet Modal/Delete.jsx';
 import Modal from 'react-bootstrap/Modal';
 const ActionButtonBannerTab = () => {
   const [activeTab, setActiveTab] = useState('newMessage'); // Default to 'newMessage' tab
@@ -26,7 +26,7 @@ const ActionButtonBannerTab = () => {
         setDisplayData('');
         break;
       case 'Delete':
-        setDisplayData(<DeleteCard />);
+        setDisplayData(<DeleteCard onHide={handleClose}/>);
         break;
       default:
         setDisplayData('');
@@ -47,7 +47,10 @@ const ActionButtonBannerTab = () => {
             {/* </Link> */}
           </Col>
           <Col xl={2} lg={2} xs={12}>
-            <div className='dropdown mb-3 mb-md-0 w-100 responsivedrop' style={{ marginLeft:'130%' }}>
+            <div
+              className='dropdown mb-3 mb-md-0 w-100 responsivedrop'
+              style={{ marginLeft: '130%' }}
+            >
               <div
                 onClick={() => {
                   setIsActive(!isActive);
@@ -88,20 +91,24 @@ const ActionButtonBannerTab = () => {
                   }}
                   className='item'
                   variant='primary'
-                  
                 >
                   Delete
                 </div>
               </div>
             </div>
           </Col>
-          <Col xl={4} lg={3} xs={6} className='d-flex justify-content-end align-items-center '>
-            <Col  md={1} lg={2} xs={6}>
+          <Col
+            xl={4}
+            lg={3}
+            xs={6}
+            className='d-flex justify-content-end align-items-center '
+          >
+            <Col md={1} lg={2} xs={6}>
               <Link className='text-muted' to='/Actionsbutton'>
                 <img src='./listingCopy.svg' alt='copybutton' />{' '}
               </Link>
             </Col>
-            <Col  md={2} lg={2} xs={6}>
+            <Col md={2} lg={2} xs={6}>
               <img
                 src='./listingFilter.svg'
                 className='ms-2'
@@ -132,8 +139,8 @@ const ActionButtonBannerTab = () => {
         </Row>
         <Row>
           <Col md={6} xl={6} xs={12}>
-            <Modal show={show} centered onHide={handleClose}>
-              <Modal.Body>{displayData}</Modal.Body>
+            <Modal show={show} centered >
+              <Modal.Body>{displayData }</Modal.Body>
             </Modal>
           </Col>
         </Row>
