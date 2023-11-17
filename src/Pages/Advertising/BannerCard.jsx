@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge';
 import Modal from 'react-bootstrap/Modal';
 import Delete from './Modal/Delet Modal/Delete.jsx';
+import { Link } from 'react-router-dom';
 const BannerCard = () => {
   const [show, setShow] = useState(false);
 
@@ -18,7 +19,6 @@ const BannerCard = () => {
       >
         <Row className='my-2'>
           <Col className='d-flex justify-content-end me-3'>
-          
             <Badge
               className='bg bg-secondary rounded-circle d-flex justify-content-center align-items-center'
               style={{
@@ -34,22 +34,23 @@ const BannerCard = () => {
                 alt='Icon 1'
               />
             </Badge>
-
-            <Badge
-              className='bg bg-secondary d-flex justify-content-center align-items-center '
-              style={{
-                borderRadius: '22px',
-                marginLeft: '10px',
-                width: '38px',
-                height: '35px',
-              }}
-            >
-              <img
-                src='/Pen, Edit.svg'
-                style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-                alt='Icon 2'
-              />
-            </Badge>
+            <Link to='/editBanner'>
+              <Badge
+                className='bg bg-secondary d-flex justify-content-center align-items-center '
+                style={{
+                  borderRadius: '22px',
+                  marginLeft: '10px',
+                  width: '38px',
+                  height: '35px',
+                }}
+              >
+                <img
+                  src='/Pen, Edit.svg'
+                  style={{ width: '80%', height: '80%', objectFit: 'contain' }}
+                  alt='Icon 2'
+                />
+              </Badge>
+            </Link>
 
             <Badge
               className='bg bg-danger d-flex justify-content-center align-items-center'
@@ -69,7 +70,6 @@ const BannerCard = () => {
                 alt='Icon 3'
               />
             </Badge>
-
           </Col>
         </Row>
         <Card.Body>
@@ -98,8 +98,8 @@ const BannerCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Modal show={show} centered >
-        <Delete onHide={handleClose}/>
+      <Modal show={show} centered>
+        <Delete onHide={handleClose} />
       </Modal>
     </>
   );

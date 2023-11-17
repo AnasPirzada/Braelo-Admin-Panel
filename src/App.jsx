@@ -17,10 +17,14 @@ import PrivacyPolicy from './Pages/Privacy Policy/index';
 import AddBanner from './Pages/Add Banner';
 import CreateBanner from './Pages/Advertising/CreateBanner.jsx';
 import NewBanner from './Pages/Advertising/CreateBanner.jsx';
+import EditBanner from './Pages/Advertising/CreateBanner.jsx';
+
 import AdvertisingPage from './Pages/Advertising/Advertising.jsx';
 import CreateSpotlight from './Pages/Advertising/createSpotlight.jsx';
+import Editspotlight from './Pages/Advertising/createSpotlight.jsx';
 import NewSpotLight from './Pages/Advertising/createSpotlight.jsx';
 import CreateTextAdd from './Pages/Advertising/CreateTextAdd.jsx';
+import EdittextAdd from './Pages/Advertising/CreateTextAdd.jsx';
 import NewAdd from './Pages/Advertising/CreateTextAdd.jsx';
 import CreateNewMessage from './Pages/Notifications/index.jsx';
 import Advices from './Pages/Notifications/page/CreateNewMessage.jsx';
@@ -57,9 +61,12 @@ function App() {
         <Route path='/CreateBanner' element={<CreateBanner />} />
         <Route path='/NewBanner' element={<NewBanner />} />
         <Route path='/AdvertisingPage' element={<AdvertisingPage />} />
+        <Route path='/EditBanner' element={<EditBanner />} />
         <Route path='/CreateSpotlight' element={<CreateSpotlight />} />
+        <Route path='/Editspotlight' element={<Editspotlight />} />
         <Route path='/NewSpotLight' element={<NewSpotLight />} />
         <Route path='/CreateTextAdd' element={<CreateTextAdd />} />
+        <Route path='/EdittextAdd' element={<EdittextAdd />} />
         <Route path='/NewAdd' element={<NewAdd />} />
         <Route path='/CreateNewMessage' element={<CreateNewMessage />} />
         <Route path='/Advices' element={<Advices />} />

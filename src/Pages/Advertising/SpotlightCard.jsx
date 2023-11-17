@@ -5,6 +5,7 @@ import Badge from 'react-bootstrap/Badge';
 import './spotlightCard.css';
 import Modal from 'react-bootstrap/Modal';
 import Delete from './Modal/Delet Modal/Delete.jsx';
+import { Link } from 'react-router-dom';
 const SpotlightCard = () => {
   const [show, setShow] = useState(false);
 
@@ -44,23 +45,27 @@ const SpotlightCard = () => {
                   alt='Icon 1'
                 />
               </Badge>
-
-              <Badge
-                className='bg bg-secondary d-flex justify-content-center align-items-center '
-                style={{
-                  borderRadius: '22px',
-                  marginLeft: '10px',
-                  width: '38px',
-                  height: '35px',
-                }}
-              >
-                <img
-                  src='./Pen, Edit.svg'
-                  style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-                  alt='Icon 2'
-                />
-              </Badge>
-
+              <Link to='/Editspotlight'>
+                <Badge
+                  className='bg bg-secondary d-flex justify-content-center align-items-center '
+                  style={{
+                    borderRadius: '22px',
+                    marginLeft: '10px',
+                    width: '38px',
+                    height: '35px',
+                  }}
+                >
+                  <img
+                    src='./Pen, Edit.svg'
+                    style={{
+                      width: '80%',
+                      height: '80%',
+                      objectFit: 'contain',
+                    }}
+                    alt='Icon 2'
+                  />
+                </Badge>
+              </Link>
               <Badge
                 className='bg bg-danger d-flex justify-content-center align-items-center'
                 style={{
@@ -83,7 +88,10 @@ const SpotlightCard = () => {
           </div>
         </Row>
 
-        <div className='Rectangular d-flex ms-auto me-auto' style={{ marginTop: '220px', width: '90%' }}>
+        <div
+          className='Rectangular d-flex ms-auto me-auto'
+          style={{ marginTop: '220px', width: '90%' }}
+        >
           <div className='imgSection'>
             <img
               src='https://images.unsplash.com/photo-1517230878791-4d28214057c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80'

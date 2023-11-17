@@ -43,22 +43,23 @@ const TextCard = () => {
                   alt='Icon 1'
                 />
               </Badge>
-
-              <div
-                className='bg bg-secondary d-flex justify-content-center align-items-center '
-                style={{
-                  borderRadius: '22px',
-                  marginLeft: '10px',
-                  width: '38px',
-                  height: '35px',
-                }}
-              >
-                <img
-                  src='./Pen, Edit.svg'
-                  style={{ objectFit: 'contain' }}
-                  alt='Icon 2'
-                />
-              </div>
+              <Link to='EdittextAdd'>
+                <div
+                  className='bg bg-secondary d-flex justify-content-center align-items-center '
+                  style={{
+                    borderRadius: '22px',
+                    marginLeft: '10px',
+                    width: '38px',
+                    height: '35px',
+                  }}
+                >
+                  <img
+                    src='./Pen, Edit.svg'
+                    style={{ objectFit: 'contain' }}
+                    alt='Icon 2'
+                  />
+                </div>
+              </Link>
               <div
                 className='bg bg-danger d-flex justify-content-center align-items-center'
                 style={{
