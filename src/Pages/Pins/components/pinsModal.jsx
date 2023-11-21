@@ -8,7 +8,7 @@ const images = [
   'https://images.unsplash.com/photo-1505832018823-50331d70d237?q=80&w=2108&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1475257026007-0753d5429e10?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
-export const Modal = () => {
+export const pinsModal = () => {
   return (
     <div>
       <Carousel
@@ -21,6 +21,7 @@ export const Modal = () => {
         {images.map((imageUrl, index) => (
           <Carousel.Item key={index}>
             <img
+              style={{ borderRadius: ' 12px 12px 0 0 ', height: '387px' }}
               src={imageUrl}
               alt={`Slide ${index + 1}`}
               className='d-block w-100'
@@ -31,4 +32,4 @@ export const Modal = () => {
     </div>
   );
 };
-export default Modal;
+export default pinsModal;
