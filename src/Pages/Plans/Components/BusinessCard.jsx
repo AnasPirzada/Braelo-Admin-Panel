@@ -4,13 +4,14 @@ import './faltCard.css';
 export const FlatCard = () => {
   return (
     <div
-    style={{
-      borderRadius: '27.042px',
-      backgroundImage: 'linear-gradient(139deg, #FDB807 13.25%, rgba(253, 184, 7, 0.00) 112.5%)',
-      height: '449px',
-      width: '100%',
-      margin: 'auto',
-    }}
+      style={{
+        borderRadius: '27.042px',
+        backgroundImage:
+          'linear-gradient(139deg, #FDB807 13.25%, rgba(253, 184, 7, 0.00) 112.5%)',
+        height: '449px',
+        width: '100%',
+        margin: 'auto',
+      }}
     >
       <div className='text-end p-3'>
         <img src='/public/cards/Group 1000004914 (1).svg' alt='' />
@@ -35,22 +36,25 @@ export const FlatCard = () => {
           <span>/month</span>{' '}
         </p>
       </div>
-      <div className=' w-75 m-auto mt-4'>
+      <div
+        className=' w-75 m-auto mt-4'
+        style={{ fontSize: '13.52px', fontWeight: '500' }}
+      >
         <p>
-          <img
-            src='./cards/Categories=Check, Component=Additional Icons.svg'
-            alt=''
-            className='me-3'
-          />
-          2 monthly ads
+          <img src='./Hard Darker tick mark .svg' alt='' className='me-3' />8
+          ads month
         </p>
         <p>
-          <img
-            src='./cards/Categories=Check, Component=Additional Icons.svg'
-            alt=''
-            className='me-3'
-          />
-          20 monthly highlights
+          <img src='./Hard Darker tick mark .svg' alt='' className='me-3' />1
+          Pin on the map all yours
+        </p>
+        <p>
+          <img src='./Hard Darker tick mark .svg' alt='' className='me-3' />
+          Unlimited highlights
+        </p>
+        <p>
+          <img src='./Hard Darker tick mark .svg' alt='' className='me-3' />
+          Exclusive Support
         </p>
       </div>
     </div>

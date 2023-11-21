@@ -63,6 +63,14 @@ body {
   /* Adjust the opacity as needed */
 }
 
+.activeButton {
+  background-color: #596068;
+}
+
+.inactiveButton {
+  background-color: #868E96;
+}
+
 @media (max-width: 768px) {
 
   /* Adjust styles for smaller screens */
@@ -92,6 +100,10 @@ body {
     width: 100% !important;
   }
 
+  .mobileres {
+    display: flex !important;
+    margin-right: 10px !important;
+  }
 }
 
 

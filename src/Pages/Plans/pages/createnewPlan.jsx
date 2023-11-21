@@ -1,11 +1,13 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import SideBar from '../../Components/SideBar';
-import NaveBar from '../../Components/NaveBar.jsx';
-import BannerTab from './components/Bannertab.jsx';
-import PrivacyPolicyPage from './components/PrivacyPolicyPage.jsx';
-const PrivacyPolicy = () => {
+import SideBar from '../../../Components/SideBar';
+import NaveBar from '../../../Components/NaveBar.jsx';
+import BannerTab from '../Components/plansbannerTab.jsx';
+import TabBar from '../Components/tabBar.jsx';
+import NewPlanmainPage from '../Components/NewPlanmainPage.jsx';
+export const createnewPlan = () => {
+  
   return (
-    <>
+    <div>
       <Container fluid className='  h-100'>
         <Row>
           <Col
@@ -14,7 +16,7 @@ const PrivacyPolicy = () => {
             className='text-center p-0'
             style={{ backgroundColor: '#495057', height: '100vh' }}
           >
-            <SideBar activetabe='Privacy' />
+            <SideBar activetabe='Plans' />
           </Col>
           <Col xs={10} md={10} style={{ overflowY: 'auto', height: '100vh' }}>
             <Row>
@@ -23,14 +25,13 @@ const PrivacyPolicy = () => {
             <Row>
               <BannerTab />
             </Row>
-            <Row className='m-0 m-md-3'>
-              <PrivacyPolicyPage />
+            <Row className='p-5'>
+              <NewPlanmainPage />
             </Row>
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
-
-export default PrivacyPolicy;
+export default createnewPlan;

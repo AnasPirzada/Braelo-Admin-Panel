@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import '../Components/faltCard.css';
-export const createNew = () => {
+
+export const NewPlanmainPage = () => {
   const firstbox = {
     width: '90px',
     height: '70px',
-    borderImage: 'linear-gradient(142.17deg, #CD9403 16.25%, #FBBC1B 97.12%) 1',
-    borderImageSlice: '1',
-    borderRadius: '15px',
-    borderStyle: 'solid',
-    borderWidth: '2.22px',
+    background: '  #E9ECEF',
   };
   const secondbox = {
     width: '90px',
     height: '70px',
-    backgroundColor: '#FFEDBF',
+    backgroundColor: '#E9ECEF',
   };
   const thirdbox = {
     width: '90px',
     height: '70px',
-    background:
-      'linear-gradient(148.35deg, #FDB807 8.2%, rgba(253, 184, 7, 0) 98.61%), ' +
-      'linear-gradient(139.43deg, #FDB807 13.25%, rgba(253, 184, 7, 0) 112.5%)',
+    background: '  #E9ECEF',
   };
   const [planTitle, setPlanTitle] = useState('yellow');
   const [planValue, setPlanValue] = useState('$ 14.99');
@@ -206,4 +201,4 @@ export const createNew = () => {
     </div>
   );
 };
-export default createNew;
+export default NewPlanmainPage;

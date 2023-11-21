@@ -4,6 +4,7 @@ import './faltCard.css';
 export const FlatCard = () => {
   return (
     <div
+      className='mb-5 pb-5'
       style={{
         borderRadius: ' 27.042px',
         border: '2.221px solid #CD9403',
@@ -30,12 +31,23 @@ export const FlatCard = () => {
         >
           Flat
         </p>
-        <p className='mb-4 mt-3 '>
-          $ Free
-          <span>/month</span>{' '}
+        <p className='mb-4 mt-3 ' style={{ fontSize: '27.04px' }}>
+          <b> $ Free </b>
+          <span
+            className='ms-1'
+            style={{
+              color: '#616161',
+              fontSize: '   15.21px',
+            }}
+          >
+            /month
+          </span>{' '}
         </p>
       </div>
-      <div className=' w-75 m-auto mt-4'>
+      <div
+        className=' w-75 m-auto mt-4'
+        style={{ fontSize: '13.52px', fontWeight: '500' }}
+      >
         <p>
           <img
             src='./cards/Categories=Check, Component=Additional Icons.svg'

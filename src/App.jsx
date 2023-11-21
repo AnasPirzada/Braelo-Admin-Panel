@@ -38,6 +38,8 @@ import NewPost from './Pages/News/page/AddNewPost.jsx';
 import CreateNewUser from './Pages/System/pages/CreateUser.jsx';
 import EditUser from './Pages/System/pages/CreateUser.jsx';
 import EditIllustrations from './Pages/System/pages/CreateIllustrationsUser.jsx';
+import CreatenewPlan from './Pages/Plans/pages/createnewPlan.jsx';
+import CreatePlansUser from './Pages/Plans/pages/Createnewuser.jsx';
 
 function App() {
   return (
@@ -83,6 +85,8 @@ function App() {
         <Route path='/CreateNewUser' element={<CreateNewUser />} />
         <Route path='/EditUser' element={<EditUser />} />
         <Route path='/EditIllustrations' element={<EditIllustrations />} />
+        <Route path='/CreatenewPlan' element={<CreatenewPlan />} />
+        <Route path='/CreatePlansUser' element={<CreatePlansUser />} />
       </Routes>
     </BrowserRouter>
   );

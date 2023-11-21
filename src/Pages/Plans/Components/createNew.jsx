@@ -4,10 +4,9 @@ import './faltCard.css';
 export const FlatCard = () => {
   return (
     <div
-  
       style={{
         borderRadius: ' 27.042px',
-        backgroundColor:'#FFEDBF',
+        backgroundColor: '#FFEDBF',
         height: '449px',
         width: '100%',
         margin: 'auto',
@@ -32,26 +31,24 @@ export const FlatCard = () => {
           Flat
         </p>
         <p className='mb-4 mt-3 '>
-          $ Free
-          <span>/month</span>{' '}
+          <b style={{ fontSize: '27.04px' }}> $ 14.99 </b>
+          <span className='ms-1' style={{ color: '#616161' }}>
+            /month
+          </span>{' '}
         </p>
       </div>
-      <div className=' w-75 m-auto mt-4'>
+      <div className=' w-75 m-auto mt-4'style={{ fontSize: '13.52px', fontWeight: '500' }}>
         <p>
-          <img
-            src='./cards/Categories=Check, Component=Additional Icons.svg'
-            alt=''
-            className='me-3'
-          />
-          2 monthly ads
+          <img src='./Darker Tick mark.svg' alt='' className='me-3' />4 monthly
+          ads
         </p>
         <p>
-          <img
-            src='./cards/Categories=Check, Component=Additional Icons.svg'
-            alt=''
-            className='me-3'
-          />
-          20 monthly highlights
+          <img src='./Darker Tick mark.svg' alt='' className='me-3' />1 Pin
+          fixed on map all yours
+        </p>
+        <p>
+          <img src='./Darker Tick mark.svg' alt='' className='me-3' />1 Pin
+          fixed on map all yours
         </p>
       </div>
     </div>
