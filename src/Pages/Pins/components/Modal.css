@@ -1,7 +1,8 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 600px; /* Adjust as needed */
+  max-width: 600px;
+  /* Adjust as needed */
   margin: 0 auto;
 }
 
@@ -41,6 +42,7 @@
 .dot.active-dot {
   background-color: #495057;
 }
+
 .carousel-images img {
   width: 100%;
   display: block;
