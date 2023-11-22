@@ -7,8 +7,8 @@ export const PinsPreviewModal = () => {
       style={{
         backgroundColor: '#FFFFFF',
         width: '610px',
-        height: '1417px',
-        borderRadius: '12px 12px 0 0',
+        height: '1150px',
+        borderRadius: '12px 12px 12px 12px ',
       }}
     >
       <PinsModal />
@@ -39,27 +39,72 @@ export const PinsPreviewModal = () => {
         }}
       >
         <div className='mt-4'>
-          <p className='fs-2' style={{ fontWeight: '600', color: '#101828' }}>
+          <p
+            style={{ fontWeight: '600', color: '#101828', fontSize: '27.47px' }}
+          >
             Lide Business Group
             <br /> Florida
           </p>
-          <p style={{ color: '#667085', fontSize: '21.41px' }}>
+          <p style={{ color: '#667085', fontSize: '15.41px' }}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             ...
           </p>
         </div>
         <div className='mt-4'>
-          <p style={{ color: '#1D96FF', fontSize: '21.41px' }}>Read more</p>
+          <p style={{ color: '#1D96FF', fontSize: '15.41px' }}>Read more</p>
+        </div>
+        <div className='mt-4'>
+          <p style={{ color: '#667085', fontSize: '12.41px' }}>Endereço</p>
         </div>
         <div>
-          <p>Endereço</p>
+          <p style={{ color: '#667085', fontSize: '12.41px' }}>
+            City Hall Square, Florida | Miami | EUA
+          </p>
         </div>
-        <div >
-          <p>City Hall Square, Florida | Miami | EUA</p>
+        <div className='mt-4'>
+          <img src='./image/google Map image.png' alt='' />
         </div>
-        <div>
-          <p>City Hall Square, Florida | Miami | EUA</p>
+
+        <div className='mt-5 d-flex justify-content-between align-items-center'>
+          <div>
+            <p
+              style={{
+                color: '#667085',
+                fontSize: '13.41px',
+                fontWeight: '600',
+              }}
+            >
+              Contato
+            </p>
+            <p
+              style={{
+                color: '#667085',
+                fontSize: '10.41px',
+                fontWeight: '600',
+              }}
+            >
+              +1 (339) 215-9749
+            </p>
+          </div>
+          <div>
+            <img src='/public/social icons/Group 1000004550.svg' alt='' />
+            <img
+              src='/public/social icons/Group 1000004526.svg'
+              alt=''
+              className='ms-3'
+            />
+            <img
+              src='/public/social icons/Group 1000004525.svg'
+              alt=''
+              className='ms-3'
+            />
+            <img
+              src='/public/social icons/Group 1000004524.svg'
+              alt=''
+              className='ms-3'
+            />
+          </div>
         </div>
       </div>
     </div>

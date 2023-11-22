@@ -1,11 +1,12 @@
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import SideBar from '../../Components/SideBar';
-import NaveBar from '../../Components/NaveBar.jsx';
-import BannerTab from './components/Bannertab.jsx';
-import PinsCard from './components/PinsCard.jsx';
-const Pins = () => {
+import SideBar from '../../../Components/SideBar';
+import NaveBar from '../../../Components/NaveBar.jsx';
+import BannerTab from '../components/Bannertab.jsx';
+import PinsPage from './pinsPage.jsx';
+export const CreatePins = () => {
   return (
-    <>
+    <div>
       <Container fluid className='  h-100'>
         <Row>
           <Col
@@ -24,13 +25,12 @@ const Pins = () => {
               <BannerTab />
             </Row>
             <Row className='m-0 m-md-3'>
-              <PinsCard />
+              <PinsPage />
             </Row>
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
-
-export default Pins;
+export default CreatePins;

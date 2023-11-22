@@ -10,6 +10,7 @@ import Statistics from './Pages/Statistics/index';
 import UserRepport from './Pages/User Repport/index';
 import Plans from './Pages/Plans/index';
 import Pins from './Pages/Pins/index';
+import CreateNewPins from './Pages/Pins/pages/CreatePins.jsx';
 import Support from './Pages/Support/index';
 import System from './Pages/System/index';
 import Archive from './Pages/Archive/index';
@@ -55,6 +56,7 @@ function App() {
         <Route path='/UserRepport' element={<UserRepport />} />
         <Route path='/Plans' element={<Plans />} />
         <Route path='/Pins' element={<Pins />} />
+        <Route path='/CreateNewPins' element={<CreateNewPins />} />
         <Route path='/System' element={<System />} />
         <Route path='/Archive' element={<Archive />} />
         <Route path='/Support' element={<Support />} />
