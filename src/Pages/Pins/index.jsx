@@ -24,7 +24,9 @@ const Pins = () => {
               <BannerTab />
             </Row>
             <Row className='m-0 m-md-3'>
-              <PinsCard />
+              <Col xl={4}>
+                <PinsCard />
+              </Col>
             </Row>
           </Col>
         </Row>
