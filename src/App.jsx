@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Login from './Pages/LoginPage/index.jsx';
 import Dashboard from './Pages/Dashboard/index';
 import Advertising from './Pages/Advertising/index';
 import Notification from './Pages/Notifications/index';
@@ -9,6 +10,7 @@ import News from './Pages/News';
 import Statistics from './Pages/Statistics/index';
 import UserRepport from './Pages/User Repport/index';
 import Plans from './Pages/Plans/index';
+import Hanking from './Pages/Hanking/index.jsx';
 import Pins from './Pages/Pins/index';
 import CreateNewPins from './Pages/Pins/pages/CreatePins.jsx';
 import Support from './Pages/Support/index';
@@ -38,7 +40,7 @@ import AddNewPost from './Pages/News/page/AddNewPost.jsx';
 import NewPost from './Pages/News/page/AddNewPost.jsx';
 import CreateNewUser from './Pages/System/pages/CreateUser.jsx';
 import EditUser from './Pages/System/pages/CreateUser.jsx';
-import EditIllustrations from './Pages/System/pages/CreateIllustrationsUser.jsx';
+import EditIllustrations from './Pages/System/pages/CreateUser.jsx';
 import CreatenewPlan from './Pages/Plans/pages/createnewPlan.jsx';
 import CreatePlansUser from './Pages/Plans/pages/Createnewuser.jsx';
 
@@ -46,7 +48,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Dashboard />} />
+        <Route path='/' element={<Login />} />
         <Route path='/Dashboard' element={<Dashboard />} />
         <Route path='/Advertising' element={<Advertising />} />
         <Route path='/Notification' element={<Notification />} />
@@ -55,6 +57,7 @@ function App() {
         <Route path='/Statistics' element={<Statistics />} />
         <Route path='/UserRepport' element={<UserRepport />} />
         <Route path='/Plans' element={<Plans />} />
+        <Route path='/Hanking' element={<Hanking />} />
         <Route path='/Pins' element={<Pins />} />
         <Route path='/CreateNewPins' element={<CreateNewPins />} />
         <Route path='/System' element={<System />} />

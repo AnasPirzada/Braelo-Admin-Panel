@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
-import PinsPreviewModal from '../components/PinsPreviewModal.jsx';
+import ConfrimModal from '../components/Success.jsx';
 export const pinsPage = () => {
   const [keywordInput, setKeywordInput] = useState('');
   const [keywords, setKeywords] = useState([
@@ -425,8 +425,8 @@ export const pinsPage = () => {
             </Col>
           </Col>
         </Row>
-        <Modal show={show} onHide={handleClose} centered>
-          <PinsPreviewModal />
+        <Modal show={show} centered>
+          <ConfrimModal onHide={handleClose} />
         </Modal>
       </Row>
     </div>

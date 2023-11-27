@@ -1,183 +1,201 @@
 // import React from 'react'
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./sidebar.css";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './sidebar.css';
 
-const SideBar = (props) => {
+const SideBar = props => {
   const [activeTab, setActiveTab] = useState(props.activetabe);
 
-  const handleTabClick = (tab) => {
+  const handleTabClick = tab => {
     setActiveTab(tab);
   };
 
   return (
     <>
-      <div className="logo-img text-center  py-4  " style={{ backgroundColor: `#FFCC35 ` }}>
-        <img src="/logo.svg" className="mobilenone"  alt="" />
-        <img src="/faveicon.svg" className="desktopnone" width='24px' alt="" />
+      <div
+        className='logo-img text-center  py-4  '
+        style={{ backgroundColor: `#FFCC35 ` }}
+      >
+        <img src='/logo.svg' className='mobilenone' alt='' />
+        <img src='/faveicon.svg' className='desktopnone' width='24px' alt='' />
       </div>
 
-      <div className="AllTabbutn text-center " style={{ backgroundColor: "#495057" }}>
-        <h4 className=" text-start ms-4 mt-3 text-light">
-          {" "}
+      <div
+        className='AllTabbutn text-center '
+        style={{ backgroundColor: '#495057' }}
+      >
+        <h4 className=' text-start ms-4 mt-3 text-light'>
+          {' '}
           <b> Plataform </b>
         </h4>
-        <Link to="/Dashboard">
+        <Link to='/Dashboard'>
           <div
             className={`d-flex align-items-center text-center justify-content-start  sidebardiv ${
-              activeTab === "Dashboard" ? "sidebarctivetab" : ""
+              activeTab === 'Dashboard' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Dashboard")}
+            onClick={() => handleTabClick('Dashboard')}
           >
-            <img src="/Group.svg" alt="" />
-            <p className="mb-0 ">Dashboard</p>
+            <img src='/Group.svg' alt='' />
+            <p className='mb-0 '>Dashboard</p>
           </div>
         </Link>
-        <Link to="/AdvertisingPage">
+        <Link to='/AdvertisingPage'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Advertising" ? "sidebarctivetab" : ""
+              activeTab === 'Advertising' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Advertising")}
+            onClick={() => handleTabClick('Advertising')}
           >
-            {" "}
-            <img src="/Slides, Windows.svg" alt="" />
+            {' '}
+            <img src='/Slides, Windows.svg' alt='' />
             <p>Advertising</p>
           </div>
         </Link>
-        <Link to="/Notification">
+        <Link to='/Notification'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Notification" ? "sidebarctivetab" : ""
+              activeTab === 'Notification' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Notification")}
+            onClick={() => handleTabClick('Notification')}
           >
-            {" "}
-            <img src="/bell-big-17-ringing.svg" alt="" />
+            {' '}
+            <img src='/bell-big-17-ringing.svg' alt='' />
             <p>Notification</p>
           </div>
         </Link>
-        <Link to="/Listing">
+        <Link to='/Listing'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Listing" ? "sidebarctivetab" : ""
+              activeTab === 'Listing' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Listing")}
+            onClick={() => handleTabClick('Listing')}
           >
-            {" "}
-            <img src="/media-library-folder.1.svg" alt="" />
+            {' '}
+            <img src='/media-library-folder.1.svg' alt='' />
             <p>Listing</p>
           </div>
         </Link>
-        <Link to="/News">
+        <Link to='/News'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "News" ? "sidebarctivetab" : ""
+              activeTab === 'News' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("News")}
+            onClick={() => handleTabClick('News')}
           >
-            {" "}
-            <img src="/Elements, Object, Copy.svg" alt="" />
+            {' '}
+            <img src='/Elements, Object, Copy.svg' alt='' />
             <p>News</p>
           </div>
         </Link>
-        <Link to="/Statistics">
+        <Link to='/Statistics'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Statistics" ? "sidebarctivetab" : ""
+              activeTab === 'Statistics' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Statistics")}
+            onClick={() => handleTabClick('Statistics')}
           >
-            {" "}
-            <img src="/Statistics, Analytics,Arrow, Up, Square,.svg" alt="" />
+            {' '}
+            <img src='/Statistics, Analytics,Arrow, Up, Square,.svg' alt='' />
             <p>Statistics</p>
           </div>
         </Link>
-        <Link to="/UserRepport">
+        <Link to='/UserRepport'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "UserRepport" ? "sidebarctivetab" : ""
+              activeTab === 'UserRepport' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("UserRepport")}
+            onClick={() => handleTabClick('UserRepport')}
           >
-            {" "}
-            <img src="/User, Share.svg" alt="" />
+            {' '}
+            <img src='/User, Share.svg' alt='' />
             <p>UserRepport</p>
           </div>
         </Link>
-        <Link to="/Plans">
+
+        <Link to='/Plans'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Plans" ? "sidebarctivetab" : ""
+              activeTab === 'Plans' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Plans")}
+            onClick={() => handleTabClick('Plans')}
           >
-            {" "}
-            <img src="/Coins,Money.svg" alt="" />
+            {' '}
+            <img src='/Coins,Money.svg' alt='' />
             <p>Plans</p>
           </div>
         </Link>
-        <Link to="/Pins">
+
+        <Link to='/Hanking'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Pins" ? "sidebarctivetab" : ""
+              activeTab === 'Hanking' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Pins")}
+            onClick={() => handleTabClick('Hanking')}
           >
-            {" "}
-            <img src="/pin-location-hand-select.svg" alt="" />
+            {' '}
+            <img src='/Medal, Prize, Reward.svg' alt='' />
+            <p>Hanking</p>
+          </div>
+        </Link>
+
+        <Link to='/Pins'>
+          <div
+            className={`d-flex align-items-center justify-content-start  sidebardiv ${
+              activeTab === 'Pins' ? 'sidebarctivetab' : ''
+            }`}
+            onClick={() => handleTabClick('Pins')}
+          >
+            {' '}
+            <img src='/pin-location-hand-select.svg' alt='' />
             <p>Pins</p>
           </div>
         </Link>
 
-        <Link to="/System">
+        <Link to='/Support'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "System" ? "sidebarctivetab" : ""
+              activeTab === 'Support' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("System")}
+            onClick={() => handleTabClick('Support')}
           >
-            {" "}
-            <img src="/grid-layout-36-square.svg" alt="" />
-            <p>System</p>
-          </div>
-        </Link>
-
-        <Link to="/Archive">
-          <div
-            className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Archive" ? "sidebarctivetab" : ""
-            }`}
-            onClick={() => handleTabClick("Archive")}
-          >
-            {" "}
-            <img src="/inage.svg" alt="" />
-            <p>Archive</p>
-          </div>
-        </Link>
-
-        <Link to="/Support">
-          <div
-            className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Support" ? "sidebarctivetab" : ""
-            }`}
-            onClick={() => handleTabClick("Support")}
-          >
-            {" "}
-            <img src="/Chat, Messages, Bubble.svg" alt="" />
+            {' '}
+            <img src='/Chat, Messages, Bubble.svg' alt='' />
             <p>Support</p>
           </div>
         </Link>
-
-        <Link to="/PrivacyPolicy">
+        <Link to='/System'>
           <div
             className={`d-flex align-items-center justify-content-start  sidebardiv ${
-              activeTab === "Privacy" ? "sidebarctivetab" : ""
+              activeTab === 'System' ? 'sidebarctivetab' : ''
             }`}
-            onClick={() => handleTabClick("Privacy")}
+            onClick={() => handleTabClick('System')}
           >
-            {" "}
-            <img src="/document-legal-users.svg" alt="" />
+            {' '}
+            <img src='/grid-layout-36-square.svg' alt='' />
+            <p>System</p>
+          </div>
+        </Link>
+        <Link to='/Archive'>
+          <div
+            className={`d-flex align-items-center justify-content-start  sidebardiv ${
+              activeTab === 'Archive' ? 'sidebarctivetab' : ''
+            }`}
+            onClick={() => handleTabClick('Archive')}
+          >
+            {' '}
+            <img src='/inage.svg' alt='' />
+            <p>Archive</p>
+          </div>
+        </Link>
+        <Link to='/PrivacyPolicy'>
+          <div
+            className={`d-flex align-items-center justify-content-start  sidebardiv ${
+              activeTab === 'Privacy' ? 'sidebarctivetab' : ''
+            }`}
+            onClick={() => handleTabClick('Privacy')}
+          >
+            {' '}
+            <img src='/document-legal-users.svg' alt='' />
             <p>Privacy Policy</p>
           </div>
         </Link>

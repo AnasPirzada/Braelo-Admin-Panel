@@ -25,7 +25,108 @@ const Pins = () => {
             </Row>
             <Row className='m-0 m-md-3'>
               <Col xl={4}>
-                <PinsCard />
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Germano 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/Rectangle 23835.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Ali iOS 
+                  Developer 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/2.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Jordan Vehicles 
+                  Store 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/3.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Germano 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/Rectangle 23835.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Ali iOS 
+                  Developer 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/2.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Jordan Vehicles 
+                  Store 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/3.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Germano 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/Rectangle 23835.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Ali iOS 
+                  Developer 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/2.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Jordan Vehicles 
+                  Store 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/3.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Germano 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/Rectangle 23835.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Ali iOS 
+                  Developer 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/2.svg'
+                />
+              </Col>
+              <Col xl={4}>
+                <PinsCard
+                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  TitleP='Jordan Vehicles 
+                  Store 
+                  Shoes Store'
+                  ProfileImage='./PinsImages/3.svg'
+                />
               </Col>
             </Row>
           </Col>
