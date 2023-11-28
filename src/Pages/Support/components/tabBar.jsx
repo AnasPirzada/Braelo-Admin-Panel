@@ -6,7 +6,7 @@ import Requests from '../pages/RequestsChat.jsx';
 export const tabBar = () => {
   return (
     <div>
-      <Tabs activeTab='Archived'>
+      <Tabs activeTab='Requests'>
         <TabList>
           <Tab component={tabs} label='Requests' id='Requests' />
           <Tab component={tabs} label='Archived messages' id='Archived' />

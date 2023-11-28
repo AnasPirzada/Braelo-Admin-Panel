@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-export const ArchivedCard = () => {
+export const ArchivedCard = ({ userName, chatimage, message, Profile }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -21,9 +21,9 @@ export const ArchivedCard = () => {
     <div>
       <Row>
         <Col xl={12}>
-          <div className='d-flex mt-5 w-100'>
+          <div className='d-flex my-3 w-100'>
             <div
-              className='d-flex justify-content-between align-items-center w-75'
+              className='d-flex justify-content-between align-items-center w-100'
               style={{ backgroundColor: '#E9ECEF' }}
             >
               <div className='d-flex justify-content-start align-items-center w-100 p-3 rounded-4 '>
@@ -36,7 +36,7 @@ export const ArchivedCard = () => {
                   }}
                 >
                   <img
-                    src='/public/Chat Images/Profile.png'
+                    src={Profile}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -56,7 +56,7 @@ export const ArchivedCard = () => {
                       fontWeight: '600',
                     }}
                   >
-                    Ryan Renold
+                    {userName}
                   </p>
                   <p
                     className=' my-0'
@@ -71,13 +71,9 @@ export const ArchivedCard = () => {
                       alt=''
                       className='ms-1'
                     />
-                    <img
-                      src='./Chat Images/gallery.svg'
-                      alt=''
-                      className='ms-1 me-1'
-                    />
-                    I would like to make a complaint about..my account, could
-                    you help me?
+                    <img src={chatimage} alt='' className='ms-1 me-1' />
+
+                    {message}
                   </p>
                 </div>
               </div>
@@ -105,21 +101,28 @@ export const ArchivedCard = () => {
               />
               {showMenu && (
                 <div
-                  className='d-flex flex-column '
+                  className='d-flex flex-column justify-content-between align-items-center rounded-3'
                   style={{
+                    transform: 'translateX(-130px) translateY(-25px)',
                     backgroundColor: '#fff',
                     border: '1px solid #75818D80',
-                    padding: '10px',
-                    borderRadius: '15px',
+                    width: '180%',
                   }}
                 >
-                  <button
+                  <p
                     onClick={handleDelete}
-                    style={{ backgroundColor: '#868E96' }}
+                    className='rounded-3 border-0 p-1 w-100'
+                    style={{ backgroundColor: '#868E96', color: '#fff' }}
                   >
                     Delete
-                  </button>
-                  <button onClick={handleRestore}>Restore</button>
+                  </p>
+                  <p
+                    onClick={handleRestore}
+                    className=' rounded-3 border-0 p-1 w-100'
+                    style={{ color: '#75818D', backgroundColor: '#fff' }}
+                  >
+                    Restore
+                  </p>
                 </div>
               )}
             </div>

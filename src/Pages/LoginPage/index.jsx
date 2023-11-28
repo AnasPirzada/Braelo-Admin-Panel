@@ -4,7 +4,11 @@ import { Row, Col } from 'react-bootstrap';
 export const index = () => {
   return (
     <Row>
-      <Col xl={6} className='d-flex justify-content-center align-items-center'>
+      <Col
+        xl={6}
+        className='d-flex justify-content-center align-items-center'
+        style={{ height: '98vh', overflowY: ' hidden' }}
+      >
         <div className='w-100 d-flex flex-column justify-content-center align-items-center'>
           <div className='d-flex flex-column justify-content-center align-items-center w-75'>
             <p
@@ -42,7 +46,7 @@ export const index = () => {
         </div>
       </Col>
 
-      <Col xl={6}>
+      <Col xl={6} style={{ height: '98vh', overflowY: ' hidden' }}>
         <div
           className='d-flex justify-content-end align-items-center w-100 mt-5 mt-md-0'
           style={{
