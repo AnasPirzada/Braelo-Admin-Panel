@@ -237,7 +237,7 @@ export const RRCombinedCard = ({
               <div className='bg-white h-100 w-75 rounded-3'>
                 <div className='text-end p-3'>
                   <img
-                    src='/public/X sign.svg'
+                    src='./X sign.svg'
                     alt='exit'
                     style={{ cursor: 'pointer' }}
                     onClick={onHide}
@@ -245,7 +245,7 @@ export const RRCombinedCard = ({
                 </div>
                 <div className='text-center'>
                   <img
-                    src='/public/checkicon.svg'
+                    src='./checkicon.svg'
                     alt='Checkicon'
                     className='mt-3'
                   />

@@ -1,20 +1,26 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import GraphCard from '../components/GraphCard.jsx';
+import { Col, Row } from 'react-bootstrap';
 import ColoumnGraph from '../components/ColoumnGraph.jsx';
+import GraphCard from '../components/GraphCard.jsx';
 import LineChar from '../components/LineChart.jsx';
 import SusbscriStat from '../components/SusbscriptionState.jsx';
 export const Generaldata = () => {
   return (
     <div className='w-100 pb-5 ' style={{ height: '170vh' }}>
-      <Row className='mt-3'>
-        <h2 className='text-black fw-bold fs-1'>$120,420.50</h2>
-        <p className='text-secondary'>
+      <Row className='mt-4'>
+        <h2
+          style={{ color: '#3A4248', fontSize: '55.84px', fontWeight: '800' }}
+        >
+          $120,420.50
+        </h2>
+        <p style={{ color: '#747A80', fontSize: '18.61px', fontWeight: '400' }}>
           Total assessed all period{' '}
           <span
             className='ms-2'
             style={{
               color: '#A9B4BF',
+              fontSize: '18.61px',
+              fontWeight: '700',
             }}
           >
             USD
@@ -57,7 +63,7 @@ export const Generaldata = () => {
           xl={3}
           md={6}
           className='d-flex ms-5'
-          style={{ backgroundColor: '#F8F9FA',width:'300px' }}
+          style={{ backgroundColor: '#F8F9FA', width: '300px' }}
         >
           <SusbscriStat />
         </Col>

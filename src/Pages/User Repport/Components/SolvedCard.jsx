@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Title } from '@mui/icons-material';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import DeleteCard from '../../Listings/components/Delet Modal/Delete.jsx';
 export const SolvedCard = ({ Name, Description, Date, Image }) => {
@@ -105,18 +104,14 @@ export const SolvedCard = ({ Name, Description, Date, Image }) => {
           <div className='bg-white h-100 w-75 rounded-3'>
             <div className='text-end p-3'>
               <img
-                src='/public/X sign.svg'
+                src='./X sign.svg'
                 alt='exit'
                 style={{ cursor: 'pointer' }}
                 onClick={archivedhandleClose}
               />
             </div>
             <div className='text-center'>
-              <img
-                src='/public/checkicon.svg'
-                alt='Checkicon'
-                className='mt-3'
-              />
+              <img src='./checkicon.svg' alt='Checkicon' className='mt-3' />
               <h2 className='mt-3 w-100 text-black fw-bold fs-5'>It's gone!</h2>
               <p className='mt-3 pb-5 w-100 text-black'>
                 The items have been

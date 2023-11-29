@@ -9,8 +9,14 @@ export const SpotlightCard = () => {
   return (
     <div>
       <Card
-        className='cardbgg rounded-4 mt-4 ms-auto me-auto position-relative'
-        style={{ width: '18rem', height: '30rem' }}
+        className='rounded-4 mt-4 ms-auto me-auto position-relative'
+        style={{
+          width: '18rem',
+          height: '30rem',
+          backgroundImage: `url('./Archieveimages/Rectangle 23790.png')`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
         <div className='overlay'></div>
         <Row className='my-2'>

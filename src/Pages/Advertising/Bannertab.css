@@ -17,9 +17,9 @@
 .dropstart,
 .dropup,
 .dropup-center {
-  padding-top: 10px !important;
-  font-weight: 550 !important;
-  color: #75818D !important;
+  /* padding-top: 10px !important; */
+  /* font-weight: 550 !important; */
+  /* color: #75818D !important; */
   border-bottom: 1px solid #75818D26;
 }
 

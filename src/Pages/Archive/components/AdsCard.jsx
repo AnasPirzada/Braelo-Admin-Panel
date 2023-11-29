@@ -5,8 +5,14 @@ export const AdsCard = () => {
   return (
     <div>
       <Card
-        className='text-left border-0 bannercardd mt-4 position-relative rounded-4 '
-        style={{ width: '100%', height: '90%' }}
+        className='text-left border-0  mt-4 position-relative rounded-4 '
+        style={{
+          width: '100%',
+          height: '90%',
+          backgroundImage: `url('./Archieveimages/Rectangle 101.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         {' '}
         <div className='overlay'></div>

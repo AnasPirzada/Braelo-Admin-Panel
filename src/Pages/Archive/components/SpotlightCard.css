@@ -1,13 +1,11 @@
-
+/* 
 .cardbgg {
-  /* Keep the opacity for the card background at 0.5 */
   background-image: url('./Archieveimages/Rectangle\ 23790.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  /* background-position: center; */
   height: 100%;
-}
+} */
 .imgSection {
   width: 40%;
 }

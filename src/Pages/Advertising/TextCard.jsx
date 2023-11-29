@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Col, Row, Badge } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import Delete from './Modal/Delet Modal/Delete.jsx';
+import { Link } from 'react-router-dom';
 const TextCard = () => {
   const [show, setShow] = useState(false);
 
@@ -43,7 +44,7 @@ const TextCard = () => {
                   alt='Icon 1'
                 />
               </Badge>
-              <Link to='EdittextAdd'>
+              <Link to='/EdittextAdd'>
                 <div
                   className='bg bg-secondary d-flex justify-content-center align-items-center '
                   style={{

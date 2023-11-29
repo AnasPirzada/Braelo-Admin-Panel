@@ -4,7 +4,6 @@ import './chatstyle.css';
 
 export const Index = () => {
   const [selectedUser, setSelectedUser] = useState(0);
-  const [inputMessage, setInputMessage] = useState('');
 
   const users = [
     {
@@ -84,25 +83,42 @@ export const Index = () => {
     },
   ]);
 
-  const handleMessageSend = () => {
-    if (inputMessage.trim() === '') {
-      // Check if the input message is empty or only contains whitespace
-      return;
-    }
+  const [sentMessages, setSentMessages] = useState([
+    {
+      id: 1,
+      text: 'Of course! We are very happy to hear from you, but how can we help you?',
+      timestamp: '08.00 PM', // Example timestamp
+    },
+    {
+      id: 1,
+      text: `Of course, we are.
+    How can I help you today?`,
+      timestamp: '08.00 PM', // Example timestamp
+    },
+  ]);
 
-    const newMessage = {
-      date: new Date().toLocaleDateString(),
-      content: inputMessage,
-      time: new Date().toLocaleTimeString(),
-    };
+  const [message, setMessage] = useState('');
 
-    const updatedData = [...data];
-    updatedData[selectedUser].messages.push(newMessage);
-    setData(updatedData);
-
-    setInputMessage(''); // Clear the input field after sending the message
+  const handleMessageChange = e => {
+    setMessage(e.target.value);
   };
 
+  const handleSendMessage = () => {
+    if (message.trim() !== '') {
+      const newMessage = {
+        id: Date.now(),
+        text: message,
+        timestamp: new Date().toLocaleString('en-US', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true,
+        }),
+      };
+
+      setSentMessages([...sentMessages, newMessage]);
+      setMessage('');
+    }
+  };
   const selectedUserData = data.find(item => item.userIndex === selectedUser);
 
   const renderedContent = selectedUserData
@@ -110,7 +126,11 @@ export const Index = () => {
         <div key={index}>
           <div
             className='ps-4 pt-5'
-            style={{ backgroundColor: '#F9F9FB', height: '90vh' }}
+            style={{
+              backgroundColor: '#F9F9FB',
+              height: '90vh',
+              overflowY: 'auto',
+            }}
           >
             <div className='text-center m-auto w-75'>
               <p
@@ -146,36 +166,39 @@ export const Index = () => {
                   </p>
                 </div>
               )}{' '}
-              {index === selectedUserData.messages.length - 1 && (
-                <div className='text-end'>
-                  <p
-                    className='mt-2 p-3'
-                    style={{
-                      color: '#F3F3F3',
-                      fontSize: '13.33px',
-                      backgroundColor: '#75818D',
-                    }}
-                  >
-                    {inputMessage}
-                  </p>
-                </div>
-              )}
-              {inputMessage && ( // Conditionally render the input message below the input field
-                <div className='text-end'>
-                  <p
-                    className='mt-2 p-3'
-                    style={{
-                      color: '#F3F3F3',
-                      fontSize: '13.33px',
-                      backgroundColor: '#75818D',
-                    }}
-                  >
-                    {inputMessage}
-                  </p>
-                </div>
-              )}
             </div>
+            {sentMessages.map((msg, index) => (
+              <div
+                key={index} // Using index as a key, consider using a unique identifier if available
+                className='w-100 d-flex flex-column align-items-end'
+              >
+                <div
+                  className='mt-2 p-3 w-25'
+                  style={{
+                    color: '#F3F3F3',
+                    fontSize: '13.33px',
+                    backgroundColor: '#75818D',
+                    borderRadius: '9.52px 0px 9.52px 9.52px',
+                  }}
+                >
+                  <p>{msg.text}</p>
+                </div>
+                <div className='d-flex'>
+                  <p
+                    style={{
+                      fontSize: '11.42px',
+                      fontWeight: '500',
+                      color: '#BABABA',
+                    }}
+                  >
+                    {msg.timestamp}
+                    <img src='./doubleTick.svg' alt='' className='ms-2' />
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
+
           <div
             className=' m-auto'
             style={{
@@ -188,29 +211,31 @@ export const Index = () => {
               <input
                 type='text'
                 placeholder='Write A Message ...'
-                value={inputMessage}
-                onChange={e => setInputMessage(e.target.value)}
+                value={message}
+                onChange={handleMessageChange}
               />
               <img
                 src='./Chat Images/send button.svg'
                 alt=''
                 role='button'
-                onClick={handleMessageSend}
+                onClick={handleSendMessage}
               />
             </div>
           </div>
         </div>
       ))
     : null;
+
   const selectedUserDetails = users[selectedUser];
 
   const selectedUserName = selectedUserDetails.name;
   const selectedUserImage = selectedUserDetails.picture;
+
   return (
     <div>
       <Row className='m-1'>
         <div
-          className='my-4 border m-auto rounded-2 p-2 d-flex justify-content-between align-items-center'
+          className='my-2 border m-auto rounded-2 p-2 d-flex justify-content-between align-items-center'
           style={{ width: '105%' }}
         >
           <input type='search' placeholder='Search |' className='w-100' />
@@ -224,7 +249,7 @@ export const Index = () => {
             <div
               key={index}
               onClick={() => handleUserClick(index)}
-              className={`d-flex justify-content-start align-items-center p-3 mt-3 border-bottom`}
+              className={`d-flex justify-content-start align-items-center p-3 mt-1 border-bottom`}
               style={{
                 cursor: 'pointer',
                 backgroundColor: selectedUser === index ? '#E9ECEF' : '#FFFFFF',
@@ -281,13 +306,14 @@ export const Index = () => {
           <div>
             <div>
               <div
-                className='d-flex justify-content-between align-items-center mt-3 p-3 border'
+                className='d-flex justify-content-between align-items-center mt-1 p-3 border'
                 style={{ backgroundColor: '#FFFFFF' }}
               >
                 <div className='d-flex justify-content-center align-items-center'>
                   <img
                     src='./Chat Images/window-finder-resize-arrow.1.svg'
                     alt=''
+                    role='button'
                     className='me-3'
                   />
                   <img src={selectedUserImage} alt='' className='me-2' />

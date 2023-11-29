@@ -12,7 +12,16 @@ export const ListingCard = () => {
           className='main'
           style={{ width: '50%', height: '100%', opacity: '0.5' }}
         >
-          <div className='rounded-3 listingimage pt-5'>
+          <div
+            className='rounded-3  pt-5'
+            style={{
+              backgroundImage: `url('./Archieveimages/Rectangle 23802.png')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              width: '100%',
+              height: '180px',
+            }}
+          >
             <p className='text-white ms-2 pt-5' style={{ fontSize: '9px' }}>
               User @crissgermano
               <br /> Register ID BRLO20230915 <br />

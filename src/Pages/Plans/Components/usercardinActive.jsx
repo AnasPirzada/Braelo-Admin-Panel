@@ -20,7 +20,7 @@ export const usercardinActive = () => {
             <Col xl={3} className='mb-4'>
               <img
                 className='userImage'
-                src='/public/image/Internal User/Ali Devstore.png'
+                src='./image/Internal User/Ali Devstore.png'
                 style={{
                   width: '120px',
                   height: '120px',
@@ -62,7 +62,7 @@ export const usercardinActive = () => {
 
             <Col className='text-center mt-5 mobileres' xl={3}>
               <img
-                src='/public/Shutdownicon.svg'
+                src='./Shutdownicon.svg'
                 style={{
                   backgroundColor: '#DEE2E6',
                   borderRadius: '50%',
@@ -72,7 +72,7 @@ export const usercardinActive = () => {
               />
 
               <img
-                src='/public/Archieve icon for user.svg'
+                src='./Archieve icon for user.svg'
                 alt=''
                 className='ms-4'
               />

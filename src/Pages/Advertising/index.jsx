@@ -22,7 +22,6 @@ const Advertising = () => {
               <NaveBar />
             </Row>
             <Row>
-              {/* <Advertisingbanner/> */}
               <BannerTab />
             </Row>
           </Col>

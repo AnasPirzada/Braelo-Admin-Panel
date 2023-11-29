@@ -62,7 +62,7 @@ export const usercardActive = () =>
 
           <Col className='text-center mt-5 mobileres' xl={ 3 }>
             <img
-              src='/public/Shutdownicon.svg'
+              src='./Shutdownicon.svg'
               style={ {
                 backgroundColor: '#DEE2E6',
                 borderRadius: '50%',
@@ -72,7 +72,7 @@ export const usercardActive = () =>
             />
 
             <img
-              src='/public/Archieve icon for user.svg'
+              src='./Archieve icon for user.svg'
               alt=''
               className='ms-4'
             />

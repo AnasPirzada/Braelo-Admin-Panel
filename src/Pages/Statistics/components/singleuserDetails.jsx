@@ -4,9 +4,20 @@ import './singleuser.css';
 function SingleUserDetails() {
   return (
     <Card className='resp' style={{ width: '35rem' }}>
-      <div className='cardimg '>
+      <div
+        className=' '
+        style={{
+          backgroundImage: `url('./image/CrissGermanoCover.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '17rem',
+        }}
+      >
         <Col></Col>
-        <Col className='text-end text-white me-2' style={{ marginTop:'210px' }}>
+        <Col
+          className='text-end text-white me-2'
+          style={{ marginTop: '210px' }}
+        >
           <p>Device</p>
           <p>Iphone 14 Pro_0234</p>
         </Col>

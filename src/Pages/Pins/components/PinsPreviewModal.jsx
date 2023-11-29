@@ -88,19 +88,19 @@ export const PinsPreviewModal = () => {
             </p>
           </div>
           <div>
-            <img src='/public/social icons/Group 1000004550.svg' alt='' />
+            <img src='./social icons/Group 1000004550.svg' alt='' />
             <img
-              src='/public/social icons/Group 1000004526.svg'
+              src='./social icons/Group 1000004526.svg'
               alt=''
               className='ms-3'
             />
             <img
-              src='/public/social icons/Group 1000004525.svg'
+              src='./social icons/Group 1000004525.svg'
               alt=''
               className='ms-3'
             />
             <img
-              src='/public/social icons/Group 1000004524.svg'
+              src='./social icons/Group 1000004524.svg'
               alt=''
               className='ms-3'
             />

@@ -120,7 +120,11 @@ const ColoumnGraph = () => {
     <div className='border p-4 rounded-3 '>
       <div className='d-flex justify-content-between align-items-center '>
         <div>
-          <h4 className='text-muted fw-bold '>Total Access</h4>
+          <h4
+            style={{ color: '#75818D', fontSize: '25.22px', fontWeight: '600' }}
+          >
+            Total Access
+          </h4>
         </div>
         <div>
           <select

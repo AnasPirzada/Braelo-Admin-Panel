@@ -21,7 +21,7 @@ export const NewUsermainPage = () => {
                 }}
               >
                 <img
-                  src='/public/image/Criss Germano.png'
+                  src='./image/Criss Germano.png'
                   style={{
                     width: '100%',
                     height: '100%',

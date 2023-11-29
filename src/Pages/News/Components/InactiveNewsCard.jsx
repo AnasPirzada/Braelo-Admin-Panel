@@ -11,13 +11,13 @@ export const InactiveNewsCard = () => {
     <div
       style={cardStyle}
     >
-      <div className='d-flex flex-wrap mt-3'>
-        <div className='col-md-4 col-xl-3 mb-3'>
+      <div className='d-flex flex-wrap mt-3 '>
+        <div className='col-md-4 col-xl-3 mb-3 '>
           <div className='image-container' style={{ position: 'relative' }}>
             <img
               src='https://plus.unsplash.com/premium_photo-1661510100033-2f86c856fe15?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               alt='person'
-              className='img-fluid rounded-4'
+              className='img-fluid rounded-3'
             />
             <div
               className='text-start'

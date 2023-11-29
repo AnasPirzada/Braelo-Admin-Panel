@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-
+import './LineChart.css'
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const item = payload[0];
@@ -74,7 +74,11 @@ const LineCharts = () => {
     <>
       <Row className='my-1 my-md-3'>
         <Col className='d-flex align-items-center justify-content-between m-2'>
-          <h4>Total acquisitions</h4>
+          <h4
+            style={{ color: '#2E2A40', fontSize: '17.41px', fontWeight: '600' }}
+          >
+            Total acquisitions
+          </h4>
           <select
             value={selectedYear}
             onChange={handleYearChange}

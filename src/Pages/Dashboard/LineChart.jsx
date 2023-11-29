@@ -1,27 +1,37 @@
 import { PureComponent, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const item = payload[0];
     return (
-      <div className="custom-tooltip p-2 rounded-3" style={{ backgroundColor: 'black' }}>
+      <div
+        className='custom-tooltip p-2 rounded-3'
+        style={{ backgroundColor: 'black' }}
+      >
         <p className='text-light'>{`Month : ${item.payload.name}`}</p>
         <p className='text-light'>{`$ ${item.value}`}</p>
       </div>
     );
   }
   return null;
-}
+};
 
 const LineCharts = () => {
   const [selectedYear, setSelectedYear] = useState('2023');
 
-  const handleYearChange = (e) => {
+  const handleYearChange = e => {
     setSelectedYear(e.target.value);
-  }
+  };
 
   const getDataForYear = () => {
     switch (selectedYear) {
@@ -58,23 +68,26 @@ const LineCharts = () => {
       default:
         return [];
     }
-  }
-
+  };
 
   return (
-    <>   
+    <>
       <Row className='my-1 my-md-3'>
         <Col className='d-flex align-items-center justify-content-between'>
           <h4>Total Sales</h4>
-          <select value={selectedYear} onChange={handleYearChange} className=' border p-2 rounded-3 pe-3'>
-            <option value="2023">2023</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
+          <select
+            value={selectedYear}
+            onChange={handleYearChange}
+            className=' border p-2 rounded-3 pe-3'
+          >
+            <option value='2023'>2023</option>
+            <option value='2021'>2021</option>
+            <option value='2020'>2020</option>
           </select>
         </Col>
       </Row>
-      
-      <ResponsiveContainer width="100%" height="100%">
+
+      <ResponsiveContainer width='100%' height='100%'>
         <LineChart
           width={500}
           height={300}
@@ -86,22 +99,28 @@ const LineCharts = () => {
             bottom: 5,
           }}
         >
-          <XAxis dataKey="name" style={{ fontSize: '10px' }} />
+          <XAxis dataKey='name' style={{ fontSize: '10px' }} />
           <YAxis style={{ fontSize: '10px' }} />
           <Tooltip content={<CustomTooltip />} />
           <Legend />
-          <Line type="monotone" dataKey="Sales" stroke="#F3A000" strokeWidth={3} activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="Profit" stroke="#FFE8BA" strokeWidth={3} activeDot={{ r: 8 }} />
+          <Line
+            type='monotone'
+            dataKey='Sales'
+            stroke='#F3A000'
+            strokeWidth={3}
+            activeDot={{ r: 8 }}
+          />
+          <Line
+            type='monotone'
+            dataKey='Profit'
+            stroke='#FFE8BA'
+            strokeWidth={3}
+            activeDot={{ r: 8 }}
+          />
         </LineChart>
       </ResponsiveContainer>
     </>
   );
-}
+};
 
 export default LineCharts;
-
-
-
-
-
-{/*  */}

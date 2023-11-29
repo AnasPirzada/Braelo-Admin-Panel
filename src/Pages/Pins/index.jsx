@@ -34,19 +34,17 @@ const Pins = () => {
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/codebg.png'
                   TitleP='Ali iOS 
-                  Developer 
-                  Shoes Store'
+                  Developer'
                   ProfileImage='./PinsImages/2.svg'
                 />
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/cardbg.png'
                   TitleP='Jordan Vehicles 
-                  Store 
-                  Shoes Store'
+                  Store'
                   ProfileImage='./PinsImages/3.svg'
                 />
               </Col>
@@ -60,19 +58,17 @@ const Pins = () => {
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/codebg.png'
                   TitleP='Ali iOS 
-                  Developer 
-                  Shoes Store'
+                  Developer'
                   ProfileImage='./PinsImages/2.svg'
                 />
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/cardbg.png'
                   TitleP='Jordan Vehicles 
-                  Store 
-                  Shoes Store'
+                  Store'
                   ProfileImage='./PinsImages/3.svg'
                 />
               </Col>
@@ -86,19 +82,17 @@ const Pins = () => {
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/codebg.png'
                   TitleP='Ali iOS 
-                  Developer 
-                  Shoes Store'
+                  Developer'
                   ProfileImage='./PinsImages/2.svg'
                 />
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/cardbg.png'
                   TitleP='Jordan Vehicles 
-                  Store 
-                  Shoes Store'
+                  Store'
                   ProfileImage='./PinsImages/3.svg'
                 />
               </Col>
@@ -112,19 +106,17 @@ const Pins = () => {
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/codebg.png'
                   TitleP='Ali iOS 
-                  Developer 
-                  Shoes Store'
+                  Developer'
                   ProfileImage='./PinsImages/2.svg'
                 />
               </Col>
               <Col xl={4}>
                 <PinsCard
-                  backgroundImage='./PinsImages/Rectangle 101.png'
+                  backgroundImage='./PinsImages/cardbg.png'
                   TitleP='Jordan Vehicles 
-                  Store 
-                  Shoes Store'
+                  Store'
                   ProfileImage='./PinsImages/3.svg'
                 />
               </Col>
